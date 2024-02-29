@@ -11,7 +11,7 @@
 <body>
   <div class="background">
 
-  <nav class="nav">
+  <nav class="nav" id="nav">
         <h1 class="logo"><a href="web.html" class="a_logo"><i class="fas fa-key" style="font-size: 30px; color: rgb(255, 255, 255);"></i>Fofr Zamečník</a></h1>
         <ul class="nav_links">
             <li class="nav_buttons"><a class="a_active" href="#nav">Domů</a></li>
@@ -19,7 +19,18 @@
             <li class="nav_buttons"><a class="a" href="#onas">O nás</a></li>
             <li class="nav_buttons"><a class="a" href="#kontakt">Kontakt</a></li>
           </ul>
+          <div id="openNav">
+            <span style="font-size:30px;cursor:pointer; color: white;" onclick="openNav()">&#9776;</span>
+        </div>
   </nav>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#nav" style="color: white;">Domů</a>
+    <a href="#sluzby" style="color: white;">Služby</a>
+    <a href="#onas" style="color: white;">O nás</a>
+    <a href="#kontakt" style="color: white;">Kontakt</a>
+</div>
+
     <div class="image_text">
     <p class="p1">ZÁMEČNICKÁ POHOTOVOST <strong style="color: rgb(255, 255, 255);">PRAHA</strong></p>
     <p class="p2">Otevření zabouchnutých dveří bez poškození</p> 
@@ -113,5 +124,27 @@
       });
     });
   </script>
+
+  <script>
+         function openNav() {
+            document.getElementById("mySidebar").style.width = "100%";
+            document.getElementById("mySidebar").style.height = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+
+        // Function to check screen width when sidebar is open
+        function checkScreenWidth() {
+            var screenWidth = window.innerWidth;
+            if (screenWidth > 900) {
+                closeNav();
+            }
+        }
+
+        window.addEventListener('resize', checkScreenWidth);
+  </script>
+
 </body>
 </html>
