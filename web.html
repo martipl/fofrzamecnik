@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <title>Zámečník v pohotovosti - Zámečnická pohotovost Praha NON-STOP</title>
+</head>
+<body>
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: rgb(245, 245, 245);
+}
+.a_logo{
+    text-decoration: none;
+    font-size: 38px;
+    color: rgb(255, 255, 255);
+}
+@media screen and (max-width: 500px) {
+    .a_logo{
+        font-size: 30px;
+    }
+}
+.a{
+    text-decoration: none;
+    font-size: 20px;
+    color: grey;
+    border-bottom: 1px solid rgb(71, 71, 71);
+}
+.nav{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    padding: 1% 15%;
+    align-items: center;
+    height: 80px;
+}
+.nav_links{
+    text-decoration: none;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.nav_buttons{
+    text-decoration: none;
+}
+.button_cislo{
+    margin-top: 70px;
+    border-radius: 25px;
+    border: none;
+    background-color: blue;
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+}
+.image_text{
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 200px;
+}
+@media screen and (max-width: 900px) {
+    .image_text{
+        text-align: center;
+    }
+}
+.p1{
+    font-size: 50px;
+    color: rgb(226, 226, 226);
+}
+.p2{
+    color: rgb(226, 226, 226);
+    margin-top: 30px;
+    font-size: 25px;
+}
+.p3{
+    color: rgb(226, 226, 226);
+    margin-top: 10px;
+    font-size: 25px;
+}
+.p4{
+    padding-top: 50px;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+.a:hover{
+    color: rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(31 31 133);
+}
+.a_active{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(31 31 133);
+}
+.a_active:hover{
+    color: rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(31 31 133);
+}
+@media screen and (max-width: 900px) {
+    .image_text{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 500px) {
+    .image_text{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-width: 900px) {
+    #openNav {
+        display: block;
+    }
+    .nav_links{
+        display: none;
+    }
+    .sidebar{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    #openNav {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+    .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0;
+    background-color: rgb(15, 15, 80);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-width: 1100px) {
+    #openNav {
+        display: block;
+    }
+    .nav_links{
+        display: none;
+    }
+    .sidebar{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1101px) {
+    #openNav {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+.tabulka1{
+  margin-left: 20%; 
+  margin-right: 20%; 
+  margin-top: 80px;
+}
+.tabulka2{
+  margin-left: 20%; 
+  margin-right: 20%; 
+  margin-top: 20px;
+}
+.pcenik{
+  font-size: 60px; 
+  text-align: center; 
+  margin-bottom: 10px;
+  color: rgb(0, 0, 0);
+}
+.pcenik1{
+  font-size: 15px; 
+  text-align: center; 
+  margin-bottom: 25px;
+}
+.psluzby{
+  padding-top: 80px;
+    text-align: center;
+    font-size: 60px;
+    color: rgb(0, 0, 0);
+}
+.onas{
+  display: flex;
+  justify-content: center;
+  margin-left: 2%; 
+  margin-right: 2%;
+}
+@media screen and (max-width: 650px) {
+  .tabulka1{
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .tabulka2{
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .pcenik{
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    .pcenik1{
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    .psluzby{
+      font-size: 40px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .a_logo{
+        font-size: 25px;
+    }
+    .nav{
+      padding: 1% 3%;
+    }
+    .image_text{
+      padding-top: 50px;
+    }
+}
+.fixed-div {
+    position: fixed; /* Nastavení fixní pozice */
+    bottom: 0; /* Umístění na dolní okraj obrazovky */
+    width: 100%; /* Šířka divu, aby pokrýval celou šířku obrazovky */
+    background-color: rgb(31 31 133);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 45px;
+    z-index: 9999; /* Zajištění, aby byl div viditelný nad ostatními prvky */
+}
+
+.fixed-div button {
+    border-radius: 25px;
+    border: solid 1px white;
+    background-color: rgb(31 31 133);
+    width: 220px;
+    height: 35px;
+    font-size: 20px;
+    color: white;
+}
+.td1{
+  width: 740px;
+}
+.tr1{
+  height: 35px;
+  font-size: 16px;
+}
+.table1{
+  padding-left: 10px; 
+  width: 100%; 
+  background-color: rgba(231, 231, 231, 0.589); 
+  color: black; 
+}
+.table2{
+  padding-left: 10px; 
+  width: 100%; 
+  background-color: rgba(209, 209, 209, 0.589); 
+  color: black; 
+}
+.table1:hover{
+  background-color: rgba(15, 15, 80, 0.3); 
+}
+.table2:hover{
+  background-color: rgb(15, 15, 80, 0.3); 
+}
+.td2{
+  min-width: 75px;
+}
+
+.background{
+    width: 100%;
+    height: 51vw;
+    min-height: 900px;
+    background-color: black;
+    background-image: url('megazamek.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+@media screen and (max-width: 900px) {
+    .background{
+        min-height: 650px;
+    }
+}
+.div_onas{
+  border-radius: 5px; 
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1); 
+  height: 500px;
+  max-width: 950px;
+  display: flex;
+}
+.klicvzamku{
+  border-top-left-radius: 5px; 
+  border-bottom-left-radius: 5px;
+  width: 340px;
+  height: 500px;
+}
+@media screen and (max-width: 920px) {
+  .div_onas{
+    display: block;
+    height: auto;
+    width: auto;
+  }
+  .klicvzamku{
+    width: 100%;
+    height: auto;
+  }
+}
+.card_all{
+  display: flex; 
+  max-height: 800px; 
+  margin-top: 40px; 
+  border-radius: 5px; 
+  max-width: 800px; 
+  border: none; 
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+}
+.card_img{
+  border-top-left-radius: 5px; 
+  border-bottom-left-radius: 5px; 
+  width: 400px;
+  height: 390px;
+}
+.nazev{
+  padding-left: 5px; 
+  padding-right: 5px; 
+  font-size: 30px; 
+  text-align: center; 
+  margin-top: 24%;
+}
+.text{
+  padding-left: 15px; 
+  padding-right: 15px; 
+  font-size: 18px; 
+  color: rgb(43, 43, 43); 
+  margin-top: 20px; 
+  margin-bottom: 10px;
+}
+.div_sluzby{
+  margin-left: 5%;  
+  margin-right: 5%;
+}
+@media screen and (max-width: 770px) {
+  .card_all{
+    display: block;
+    max-width: 400px;
+  }
+  .nazev{
+    margin-top: 1%;
+  }
+  .card_img{
+    width: 100%;
+    height: 350px;
+  }
+  .div_sluzby{
+    margin-left: 10%;  
+    margin-right: 10%;
+  }
+}
+  </style>
+  <div class="background">
+
+  <nav class="nav" id="nav">
+        <h1 class="logo"><a href="web.html" class="a_logo"><i class="fas fa-key" style="font-size: 30px; color: rgb(255, 255, 255);"></i>Zámečník v pohotovosti</a></h1>
+        <ul class="nav_links">
+            <li class="nav_buttons"><a class="a_active" href="#nav">Domů</a></li>
+            <li class="nav_buttons"><a class="a" href="#sluzby">Služby</a></li>
+            <li class="nav_buttons"><a class="a" href="#cenik">Ceník</a></li>
+            <li class="nav_buttons"><a class="a" href="#onas">O nás</a></li>
+            <li class="nav_buttons"><a class="a" href="#kontakt">Kontakt</a></li>
+          </ul>
+          <div id="openNav">
+            <span style="font-size:30px;cursor:pointer; color: white;" onclick="openNav()">&#9776;</span>
+        </div>
+  </nav>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#nav" style="color: white;" onclick="closeNav()">Domů</a>
+    <a href="#sluzby" style="color: white;" onclick="closeNav()">Služby</a>
+    <a href="#cenik" style="color: white;" onclick="closeNav()">Ceník</a>
+    <a href="#onas" style="color: white;" onclick="closeNav()">O nás</a>
+    <a href="#kontakt" style="color: white;" onclick="closeNav()">Kontakt</a>
+</div>
+
+    <div class="image_text">
+    <p class="p1">ZÁMEČNICKÁ POHOTOVOST <strong style="color: rgb(255, 255, 255);">PRAHA</strong></p>
+    <p class="p2">Otevření zabouchnutých dveří bez poškození</p> 
+    <p class="p3">Příjezd do 20 minut</p> 
+    
+    </div>  
+    <div style=" padding: 0 20%; margin-top: 5%;">
+    <p style="text-align: center;"><a href="#sluzby" style="font-size: 100px; text-decoration: none; color: rgb(255, 255, 255);">&#x2304; </a></p>
+    </div>
+  </div>
+
+
+  <div id="sluzby" class="div_sluzby">
+    <p class="psluzby"><strong>Naše služby</strong></p>
+    <div style="display: flex;flex-wrap: wrap; gap: 20px; justify-content: center;">
+
+    <div class="card_all">
+        <img class="card_img" src="Obrázek3.png">
+        <div class="div_jmeno">
+          <p class="nazev"><strong>Otevření dveří</strong></p>
+          <p class="text">Pokud se nemůžete dostat do svého domu tak jste tady správně, my Vám pomůžeme
+            Poskytujeme komplexní zámečnické služby, otevírání všech typů zabouchnutých i zamčených dveří. Výměny všech typů zámků, od vložek s základním stupněm bezpečnosti po vložky s nejvyšším stupněm bezpečnosti</p>
+          </div>  
+    </div>
+    <div class="card_all">
+      <img class="card_img" src="Obrázek5.png">
+      <div class="div_jmeno">
+        <p class="nazev" ><strong>Zabezpečení</strong></p>
+        <p class="text" >Kompletní zabezpečení Vašeho domova/obchodních prostor. Pomůžeme Vám vybrat správné zabezpečení, tak aby jste se cítily bezpečně a to bez pochybů</p>
+        </div>  
+  </div>
+  <div class="card_all" >
+    <img class="card_img" src="Obrázek66.png">
+    <div class="div_jmeno">
+      <p class="nazev" ><strong>Výměna všech typů zámků</strong></p>
+      <p class="text" >Naše zámečnici dokážou vyměnit nebo namontovat  jakýkoliv zámek nebo vložku,  všech značek a bezpečnostních tříd. Výměna vložky zámku je pro nás rutinní záležitostí. Volejte kdykoliv – náš zámečník Vám ZDARMA poradí s výběrem zámku nebo vložky. NONSTOP pohotovost Praha</p>
+      </div>  
+</div>
+<div class="card_all" >
+  <img class="card_img" src="Obrázek77.jpg">
+  <div class="div_jmeno">
+    <p class="nazev"><strong>Oprava dveří po násilném vloupání</strong></p>
+    <p class="text" >Jestli jste se staly obětí trestného činu, nebo jiného násilného vniknutí, vaše dveře a zámky dáme do pořádku. Kvalitně a spolehlivě, to jsou naše hesla, kterými se naši zámečníci od počátku řídí. Pro oběti trestného činu máme slevu 20%.</p>
+    </div>  
+</div>
+<div class="card_all" >
+  <img class="card_img" src="Obrázek8.png">
+  <div class="div_jmeno">
+    <p class="nazev" ><strong>Otevírání trezorových zámků</strong></p>
+    <p class="text" >S otevíráním trezorových zámků máme bohaté zkušenosti, a proto si s otevřením trezoru hravě poradíme</p>
+    </div>  
+</div>
+<div class="card_all" >
+  <img class="card_img" src="Obrázek9.png">
+  <div class="div_jmeno">
+    <p class="nazev" ><strong>Montáž všech typů kování</strong></p>
+    <p class="text" >Montáž kování je naší každodenní rutinou, a proto je pro nás montáž kování všech druhů hračka. Montáž Vám provedeme rychle a kvalitně</p>
+    </div>  
+</div>
+<div class="card_all" >
+  <img class="card_img" src="Obrázek10.jpg">
+  <div class="div_jmeno">
+    <p class="nazev" ><strong>Zlomený klíč v zámku</strong></p>
+    <p class="text">Zlomený klíč v zámku pro nás není žádná potíž. Klíč přijedeme ze zámku vyjmout. Proces trvá většinou jen krátkou chvíli a to kvůli zkušenostem které naší zámečníci mají. Zlomený klíč v zámku se stává dnes a denně. Zvládneme vyjmout veškeré typy klíčů, z různých typů vložek</p>
+    </div>  
+</div>
+<div class="card_all" >
+  <img class="card_img" src="Obrázek11.jpg">
+  <div class="div_jmeno">
+    <p class="nazev" ><strong>Otevření automobilu</strong></p>
+    <p class="text" >K otevírání automobilů používáme ty nejmodernější nástroje a proto vám jakékoliv vozidlo otevřeme bez poškození</p>
+    </div>  
+</div>
+
+
+</div>
+</div> 
+  </div>
+
+  <div id="cenik" class="tabulka1">
+    <p class="pcenik"><strong>Ceník</strong></p>
+    <p class="pcenik1" >Poskytujeme rychlé, profesionální a spolehlivé zámečnické služby v Praze a okolí nepřetržitě 7 dní v týdnu, nonstop 24 hodin denně</p>
+    <div>
+    <div style="box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.15);">
+      <table style="width: 100%; background-color: rgb(31 31 133); padding-left: 10px;">
+        <tr style="height: 40px; font-size: 20px; color: white;">
+          <td style="width: 737px;">Popis práce</td>
+          <td style="width: 50px;">Cena</td><td style="font-size: 15px;">(od)</td>
+        </tr>
+      </table>
+      <table class="table1">
+        <tr class="tr1">
+            <td class="td1">Otevření zabouchnutých dveří</td>
+            <td class="td2">900 Kč</td>
+        </tr>
+      </table>
+        <table class="table2">
+          <tr class="tr1">
+            <td class="td1">Výměna zámku / vložky</td>
+            <td class="td2">300 Kč</td>
+        </tr>
+        </table>
+        <table class="table1">
+        <tr class="tr1">
+          <td class="td1">Výměna vložky přídavného zámku</td>
+          <td class="td2">800 Kč</td>
+        </tr>
+      </table>
+      <table class="table2">
+        <tr class="tr1">
+          <td class="td1">Výměna vložky (bezpečnostní dveře)</td>
+          <td class="td2">500 Kč</td>
+        </tr>
+      </table>
+      <table class="table1">
+        <tr class="tr1">
+          <td class="td1">Výměna zámku CR, Mottura, Atra, Cisa…</td>
+          <td class="td2">1 000 Kč</td>
+        </tr>
+      </table>
+      <table class="table2">
+        <tr class="tr1">
+          <td class="td1">Oprava zaseklého zámku / vložky</td>
+          <td class="td2">500 Kč</td>
+        </tr>
+      </table>
+      <table class="table1">
+        <tr class="tr1">
+          <td class="td1">Montáž chytrého zámku</td>
+          <td class="td2">800 Kč</td>
+        </tr>
+      </table>
+      <table class="table2">
+        <tr class="tr1">
+          <td class="td1">Montáž bezpečnostního kováni</td>
+          <td class="td2">800 Kč</td>
+        </tr>
+      </table>
+      <table class="table1">
+                  <tr class="tr1">
+              <td class="td1">Montáž zadlabacího zámku</td>
+              <td class="td2">600 Kč</td>
+            
+          </tr>
+      </table>
+          <table class="table2">
+          <tr class="tr1">
+              <td class="td1">Montáž samozamykacího zámku</td>
+              <td class="td2">1 500 Kč</td>
+          </tr>
+        </table>
+        <table class="table1">
+          <tr class="tr1">
+            <td class="td1">Vyjmutí zalomeného klíče (dle zalomení)</td>
+            <td class="td2" >400 Kč</td>
+          </tr>
+        </table>
+        <table class="table2">
+          <tr class="tr1">
+            <td class="td1">Demontáž vložky zámku bez klíče</td>
+            <td class="td2">500 Kč</td>
+          </tr>
+        </table>
+        <table class="table1">
+          <tr class="tr1">
+            <td class="td1">Montáž závory FAB, HSP, CR, ATRA, CISA</td>
+            <td class="td2">1 500 Kč</td>
+          </tr>
+        </table>
+        <table class="table2">
+          <tr class="tr1">
+            <td class="td1">Montáž přídavného zámku 1572 apod.</td>
+            <td class="td2">1 000 Kč</td>
+          </tr>
+        </table>
+        <table class="table1">
+          <tr class="tr1">
+            <td class="td1">Oprava dveří po vloupáni</td>
+            <td class="td2">400 Kč</td>
+          </tr>
+        </table>
+        </div>
+        </div>
+      </div>
+
+        <div class="tabulka2">
+          <div style="box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.15);">
+            <table style="width: 100%; background-color: rgb(31 31 133); padding-left: 10px;">
+              <tr style="height: 40px; font-size: 20px; color: white;">
+                <td style="width: 737px;">Cestovné, slevy, příplatky</td>
+                <td style="width: 50px;">Cena</td><td style="font-size: 15px;">(od)</td>
+              </tr>
+            </table>
+            <table class="table1">
+              <tr class="tr1">
+                  <td class="td1">Doprava po Praze</td>
+                  <td class="td2">580 Kč</td>
+              </tr>
+            </table>
+            <table class="table2">
+              <tr class="tr1">
+                  <td class="td1">Doprava mimo Prahu</td>
+                  <td class="td2">15 Kč/km</td>
+              </tr>
+            </table>
+            <table class="table1">
+              <tr class="tr1">
+                <td class="td1">Každá další cesta k zakázce</td>
+                <td class="td2">350 Kč</td>
+              </tr>
+            </table>
+            <table class="table2">
+              <tr class="tr1">
+                <td class="td1">Expresní výjezd, pohotovost</td>
+                <td class="td2">200 Kč</td>
+              </tr>
+            </table>
+            <table class="table1">
+              <tr class="tr1">
+                <td class="td1">Sleva pro obětí TČ (vloupáni apod.)</td>
+                <td class="td2">-20 %</td>
+              </tr>
+            </table>
+            <table class="table2">
+              <tr class="tr1">
+                <td class="td1">Mimopracovní příplatek (17:00 – 22:00)</td>
+                <td class="td2">+50 %</td>
+              </tr>
+            </table>
+            <table class="table1">
+              <tr class="tr1">
+                <td class="td1">Noční pohotovost (22:00 – 7:00) a státní svátek</td>
+                <td class="td2">+100 %</td>
+              </tr>
+            </table>
+              <table class="table2">
+              <tr class="tr1">
+                <td class="td1">Práce o víkendu (sobota a neděle)</td>
+                <td class="td2">+50 %</td>
+              </tr>
+              </table>
+              </table>
+              </div>
+        </div>
+      <div class="fixed-div">
+        <button style="border-radius: 25px; border: solid 1px white; background-color: rgb(31 31 133); width: 220px; height: 35px; font-size: 20px; color: white;"><i style="font-size:20px; padding-right: 5px;" class="fa">&#xf095;</i><a href="+420732332481" style="color: white; text-decoration: none;">+420 732 332 481</a></button>
+      </div>
+      <p style="margin-top: 80px; font-size: 60px; text-align: center; margin-bottom: 25px; color: rgb(0, 0, 0);"><strong>O nás</strong></p>
+      <div id="onas" class="onas">
+        <div class="div_onas">
+          <div>
+            <img class="klicvzamku" src="https://img.freepik.com/free-photo/keys-set-arrangement-still-life_23-2151011300.jpg?t=st=1709565801~exp=1709569401~hmac=7141b8804190ae9a1b3566f4e6a3f2f4a388768620a238595d5c7acf777d279a&w=740" alt="klicvzamku">
+          </div>
+          <div>
+            <p style="font-size: 45px;padding-left: 35px; margin-top: 30px; margin-bottom: 25px; color: rgb(0, 0, 0);">Zámečník v pohotovosti</p>
+        <p style="padding-left: 35px; padding-right: 35px; font-size: 22px; margin-bottom: 20px; color: rgb(85, 85, 85);">Jsme zámečnická pohotovost fungující nonstop 24 hodin denně 7 dní v týdnu. Máme pověst spolehlivého a profesionálního poskytovatele služeb v oboru zámečnictví. Naším hlavním cílem je poskytování prvotřídních služeb od samotného objednání až po vystavení daňového dokladu.</p>
+              <p style="color: black; font-size: 25px;"><strong style="font-size: 30px; color: rgb(25, 25, 170); padding-left: 35px;">&#10003;</strong> Certifikovaní specialisté v oboru</p>
+              <p style="color: black; font-size: 25px;"><strong style="font-size: 30px; color: rgb(25, 25, 170); padding-left: 35px;">&#10003;</strong> Fungující nonstop 24/7</p>
+              <p style="color: black; font-size: 25px;"><strong style="font-size: 30px; color: rgb(25, 25, 170); padding-left: 35px;">&#10003;</strong> Příjezd do 20 minut</p>
+              <p style="color: black; font-size: 25px;"><strong style="font-size: 30px; color: rgb(25, 25, 170); padding-left: 35px;">&#10003;</strong> Informace o ceně před prací</p>
+      </div>
+      </div>
+      </div>
+<br>
+<br>
+<br>
+<br>
+<br>  
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+  <script>
+         function openNav() {
+            document.getElementById("mySidebar").style.width = "100%";
+            document.getElementById("mySidebar").style.height = "300px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+
+        // Function to check screen width when sidebar is open
+        function checkScreenWidth() {
+            var screenWidth = window.innerWidth;
+            if (screenWidth > 900) {
+                closeNav();
+            }
+        }
+
+        window.addEventListener('resize', checkScreenWidth);
+  </script>
+
+</body>
+</html>
