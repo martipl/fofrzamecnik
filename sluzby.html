@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://fontawesome.com/icons/lightbulb?f=classic&s=regular">
+    <link rel="shortcut icon" type="x-icon" href="light-bulb.png">
+    <title>Elektrikáři-24/7 | Elektrikářská pohotovost Praha NON-STOP</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        body{
+            background-color: #ffffff;
+        }
+        .div_all{
+            width: 100%;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            background-color: #fff;
+            padding-bottom: 100px;
+        }
+        .nav{
+            width: 100%;
+            display: flex;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.5s, opacity 0.5s;
+            align-items: center;
+        }
+        .nav_div{
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.9);
+            transition: background-color 0.5s, opacity 0.5s;
+        }
+        .nav_links{
+            text-decoration: none;
+            display: flex;
+            gap: 120px;
+            list-style: none;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav_buttons{
+            text-decoration: none;
+        }
+        .a{
+            text-decoration: none;
+            font-size: 24px;
+            color: #220c83;
+            font-weight: 600;
+        }
+        .a:hover{
+            border-bottom: 1px solid #2202af;
+            color: #2202af;
+        }
+        .a_logo{
+            height: 75px;
+            text-decoration: none;
+            font-size: 45px;
+            color: rgb(255, 255, 255);
+        }
+        .logo{
+            align-items: center;
+            display: flex;
+            text-shadow: 0 0 2px #222222;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            background-color: white;
+            position: fixed;
+            z-index: 1;
+            top: 0px;
+            left: 0;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-width: 1150px) {
+            #openNav {
+                display: block;
+            }
+            .nav_links{
+                display: none;
+            }
+            .sidebar{
+                text-align: center;
+            }
+            .a_logo{
+                font-size: 35px;
+            }
+        }
+
+        @media screen and (min-width: 1151px) {
+            #openNav {
+                display: none;
+            }
+        }
+        @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0px;
+            left: 0;
+            background-color: #2202af;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        @media screen and (max-width: 1150px) {
+            #openNav {
+                display: block;
+            }
+            .nav_links{
+                display: none;
+            }
+            .sidebar{
+                text-align: center;
+            }
+        }
+
+        @media screen and (min-width: 1151px) {
+            #openNav {
+                display: none;
+            }
+        }
+        @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+        }
+        .div_image{
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: column;
+            margin-top: 80px;
+            height: 700px;
+            background-image: url('pozadi.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+        }
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #0052cc;
+            color: white;
+            cursor: pointer;
+        }
+        .jmeno{
+            color: white; 
+            font-size: 20px;
+        }
+        .psluzby{
+        padding-top: 90px;
+        font-weight: 700;
+        text-align: center;
+        font-size: 70px;
+        color: #220c83;
+        }
+        .card_all{
+        flex-direction: column;
+        display: flex; 
+        height: 250px; 
+        margin-top: 40px; 
+        border-radius: 5px; 
+        width: 350px; 
+        border: none; 
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+        }
+        .nazev{
+        padding-left: 5px; 
+        padding-right: 5px; 
+        font-size: 25px; 
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        text-align: center; 
+        background-color: #220c83;
+        color: white;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .text{
+        padding-left: 15px; 
+        padding-right: 15px; 
+        font-size: 18px; 
+        color: rgb(43, 43, 43); 
+        margin-top: 20px; 
+        margin-bottom: 10px;
+        }
+        .div_card{
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 20px; 
+            justify-content: center;
+        }
+        .onas{
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        padding-bottom: 50px;
+        flex-direction: column;
+        align-items: center
+        }
+        .div_onas{
+        margin-top: 50px;
+        border-radius: 5px; 
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1); 
+        height: 500px;
+        width: 950px;
+        display: flex;
+        }
+        .onas_img{
+        border-top-left-radius: 5px; 
+        border-bottom-left-radius: 5px;
+        width: 340px;
+        height: 500px;
+        }
+        .p_image_nazev{
+            color: white; 
+            font-size: 200px; 
+            font-weight: 700; 
+            text-shadow: 0 0 6px #222222;
+        }
+        .p_image_text{
+            color: white; 
+            font-size: 40px; 
+            font-weight: 700; 
+            text-shadow: 0 0 6px #222222;
+            text-align: center;
+        }
+        @media screen and (max-width: 1151px) {
+            .p_image_nazev{
+                font-size: 150px;
+            }
+            .p_image_text{
+                font-size: 30px;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            .p_image_nazev{
+                font-size: 85px;
+            }
+        }
+        .kontakt{
+            display: flex; 
+            flex-direction: row-reverse; 
+            width: 500px; 
+            justify-content: space-between; 
+            padding-bottom: 20px; 
+            align-items: flex-end; 
+            padding-top: 80px;
+        }
+        .div_counter{
+            height: 250px; 
+            background-color: #220c83; 
+            display: flex; 
+            padding-left: 15%; 
+            padding-right: 15%; 
+            justify-content: space-evenly; 
+            align-items: center;
+        }
+        .count{
+            color: white; 
+            font-weight: 700; 
+            font-size: 50px;
+        }
+        .count2{
+            color: white; 
+            font-weight: 500; 
+            font-size: 20px;
+        }
+        .p_sluzby_nazev{
+            text-align: center; 
+            font-size: 70px; 
+            font-weight: 700; 
+            color: #220c83; 
+            padding-bottom: 50px;
+        }
+        @media screen and (max-width: 1151px) {
+            form{
+                width: 350px;
+            }
+            .kontakt{
+                width: 350px;
+            }
+            .div_counter{
+                padding-left: 0; 
+                padding-right: 0; 
+            }
+            .count{
+                font-size: 35px;
+            }
+            .count2{
+                font-size: 18px;
+            }
+            .p_sluzby_nazev{
+                font-size: 50px;
+            }
+        }
+        @media screen and (max-width: 920px) {
+      .div_onas{
+        display: block;
+        height: auto;
+        width: 100%;
+        border-radius: 0;
+      }
+      .onas{
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .onas_img{
+        width: 100%;
+        height: 450px;
+        border-radius: 0;
+      }
+    }
+    .div_sluzby_all{
+            display: flex; 
+            margin-bottom: 150px; 
+            flex-direction: column; 
+            padding-top: 80px;
+        }
+        .div_sluzby{
+            display: flex; 
+            width: 100%;
+        }
+        
+        .sluzby_nazev1{
+            width: 40%; 
+            height: 350px; 
+            background-image: url('backgr (1).png'); 
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            background-position: center;
+        }
+        .sluzby_nazev2{
+            width: 40%; 
+            height: 350px; 
+            background-image: url('backgr (2).png'); 
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            background-position: center;
+        }
+        .p_nazev{
+            color: white; 
+            text-align: center; 
+            display: flex; 
+            height: 100%; 
+            justify-content: center; 
+            align-items: center; 
+            font-size: 80px; 
+            font-weight: 700; 
+            text-shadow: 0 0 6px #222222;
+        }
+        .sluzby_text1{
+            width: 60%; 
+            height: 350px; 
+            background-color: #0044ab25;
+        }
+        .sluzby_text2{
+            width: 60%; 
+            height: 350px; 
+            background-color: #002a6a2c;
+        }
+        .p_text{
+            padding: 25px; 
+            font-size: 20px; 
+            font-weight: 500;
+        }
+        @media screen and (max-width: 920px) {
+            .div_sluzby{
+                flex-direction: column;
+            }
+            .sluzby_nazev1{
+                width: 100%;
+            }
+            .sluzby_nazev2{
+                width: 100%;
+            }
+            .sluzby_text1{
+                width: 100%;
+            }
+            .sluzby_text2{
+                width: 100%;
+            }
+            .p_nazev{
+                font-size: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="div_all">
+        <div class="background">
+            <nav class="nav" id="nav">
+                <div class="nav_div">
+                    <a href="/" class="a_logo"><img src="logo.png" style="width: 193px; height: 75px;"></a>
+                    <ul class="nav_links">
+                        <li class="nav_buttons"><a class="a" href="/">Domů</a></li>
+                        <li class="nav_buttons"><a class="a" href="#sluzby">Služby</a></li>
+                        <li class="nav_buttons"><a class="a" href="#onas">O nás</a></li>
+                        <li class="nav_buttons"><a class="a" href="#kontakt">Kontakty</a></li>
+                    </ul>
+                </div>
+                <div id="openNav">
+                    <span style="font-size:35px;cursor:pointer; color: #220c83;" onclick="openNav()">&#9776;</span>
+                </div>
+            </nav>
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#sluzby" style="color: white;" onclick="closeNav()">Služby</a>
+                <a href="#onas" style="color: white;" onclick="closeNav()">O nás</a>
+                <a href="#kontakt" style="color: white;" onclick="closeNav()">Kontakty</a>
+            </div>
+            <div class="div_image">
+                <p class="p_image_nazev">GURUvIT</p>
+                <p class="p_image_text">Vše co potřebujete v IT na jednom místě</p>
+            </div>
+
+                
+                  </div>
+            </div>
+
+
+            <div class="div_sluzby_all" id="sluzby">
+                <p class="p_sluzby_nazev">S ČÍM VÁM POMŮŽEME</p>
+                <div class="div_sluzby">
+                    <div class="sluzby_nazev1">
+                        <p class="p_nazev">IT konzultace</p>
+                    </div>
+                    <div class="sluzby_text1">
+                        <p class="p_text">text</p>
+                    </div>
+                </div>
+                <div class="div_sluzby">
+                    <div class="sluzby_nazev2">
+                        <p class="p_nazev">PPC reklamy</p>
+                    </div>
+                    <div class="sluzby_text2">
+                        <p class="p_text">text</p>
+                    </div>
+                </div>
+                <div class="div_sluzby">
+                    <div class="sluzby_nazev1">
+                        <p class="p_nazev">Založení serveru</p>
+                    </div>
+                    <div class="sluzby_text1">
+                        <p class="p_text">text</p>
+                    </div>
+                </div>
+                <div class="div_sluzby">
+                    <div class="sluzby_nazev2">
+                        <p class="p_nazev">Webové stránky</p>
+                    </div>
+                    <div class="sluzby_text2">
+                        <p class="p_text">text</p>
+                    </div>
+                </div>
+                <div class="div_counter">
+                    <div class="counter" data-target="2000" style="text-align: center; width: 300px;">
+                        <i class='fas fa-user-alt' style="color: white; font-size: 60px;"></i>
+                        <p class="count">0</p>
+                        <p class="count2">Spokojených zákazníků</p>
+                    </div>
+                    <div class="counter" data-target="10" style="text-align: center; width: 300px;">
+                        <i class='fas fa-desktop'style="color: white; font-size: 60px;"></i>
+                        <p class="count">0</p>
+                        <p class="count2">Hotových šablon</p>
+                    </div>
+                    <div class="counter" data-target="500" style="text-align: center; width: 300px;">
+                        <i class="fa fa-clock-o"style="color: white; font-size: 60px;"></i>
+                        <p class="count">0</p>
+                        <P class="count2">Hodin vývoje</P>
+                    </div>
+                </div>
+                <div class="div_sluzby">
+                    <div class="sluzby_nazev1">
+                        <p class="p_nazev">Chytrá domácnost</p>
+                    </div>
+                    <div class="sluzby_text1">
+                        <p class="p_text">text</p>
+                    </div>
+                </div>
+                <div class="div_sluzby">
+                    <div class="sluzby_nazev2">
+                        <p class="p_nazev">Telekomunikace</p>
+                    </div>
+                    <div class="sluzby_text2">
+                        <p class="p_text">text</p>
+                    </div>
+                </div>
+                <div class="div_sluzby">
+                    <div class="sluzby_nazev1">
+                        <p class="p_nazev">Pr marketing</p>
+                    </div>
+                    <div class="sluzby_text1">
+                        <p class="p_text">text</p>
+                    </div>
+                </div>
+                <div class="div_sluzby">
+                    <div class="sluzby_nazev2">
+                        <p class="p_nazev">PC</p>
+                    </div>
+                    <div class="sluzby_text2">
+                        <p class="p_text">text</p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="div_formular" style="height: 100%; background-color: #220c83; display: flex; align-items: center; flex-direction: column; padding-top: 30px;">
+                <p style="font-size: 60px; color: white; font-weight: 700; text-align: center; padding-top: 30px; padding-bottom: 40px;">KONTAKTNÍ FORMULÁŘ</p>
+                <form action="send_email.php" method="post">
+                    <label class="jmeno" for="jmeno">Jméno</label>
+                    <input type="text" id="jmeno" name="jmeno" required>
+                
+                    <label class="jmeno" for="prijmeni">Příjmení</label>
+                    <input type="text" id="prijmeni" name="prijmeni" required>
+                
+                    <label class="jmeno" for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                
+                    <label class="jmeno" for="problem">S čím potřebuji pomoc (popis problému)</label>
+                    <textarea id="problem" name="problem" style="max-width: 500px; min-height: 100px;"></textarea>
+                
+                    <input type="submit" value="Odeslat" style="font-size: 20px;">
+                </form>
+
+
+                <div class="kontakt" id="kontakt">
+                    <div>
+                        <p style="color: white;">GURUvIT</p>
+                        <p style="color: white;">Email: info@GURUvIT.cz</p>
+                        <p style="color: white;">Tel: xxx xxx xxx</p>
+                        <p style="color: white;">Praha a okolí</p>
+                    </div>
+                    <p style="color: white; font-size: 12px;">© 2024 GURUvIT.cz. All Rights Reserved</p>
+                </div>
+            </div>
+
+
+
+
+    <script>
+        // Function to create the counting effect
+        function animateCounter(element) {
+            const target = +element.getAttribute('data-target');
+            const countElement = element.querySelector('.count');
+            const speed = 200; // lower is faster
+            let count = 0;
+    
+            const updateCount = () => {
+                const increment = target / speed;
+                if (count < target) {
+                    count += increment;
+                    countElement.textContent = Math.ceil(count);
+                    setTimeout(updateCount, 1);
+                } else {
+                    countElement.textContent = target + (target === 2000 || target === 500 ? '+' : '');
+                }
+            };
+    
+            updateCount();
+        }
+    
+        // Check if the counter is in view
+        function checkCountersInView() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const rect = counter.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    animateCounter(counter);
+                    // Remove the event listener after animation to prevent it from running multiple times
+                    window.removeEventListener('scroll', checkCountersInView);
+                }
+            });
+        }
+    
+        // Add scroll event listener
+        window.addEventListener('scroll', checkCountersInView);
+        // Run the check immediately in case the counters are already in view
+        checkCountersInView();
+    </script>
+
+    <script>
+        function openNav() {
+           document.getElementById("mySidebar").style.width = "100%";
+           document.getElementById("mySidebar").style.height = "250px";
+           document.getElementById("mySidebar").style.top = "80px";
+       }
+       
+       function closeNav() {
+           document.getElementById("mySidebar").style.width = "0";
+       }
+       function checkScreenWidth() {
+           var screenWidth = window.innerWidth;
+           if (screenWidth > 900) {
+               closeNav();
+           }
+       }
+       window.addEventListener('resize', checkScreenWidth);
+
+       window.addEventListener('scroll', function() {
+           var nav = document.getElementById('nav');
+           if (window.scrollY > 50) {
+               nav.style.backgroundColor = 'rgba(255, 255, 255)';
+               nav.style.opacity = '0.8';
+           } else {
+               nav.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+               nav.style.opacity = '1';
+           }
+       });
+    </script>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
