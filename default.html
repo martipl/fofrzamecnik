@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://fontawesome.com/icons/lightbulb?f=classic&s=regular">
+    <link rel="shortcut icon" type="x-icon" href="key.png">
+    <title>Zámočníci-24/7 | Zámočnícka pohotovosť Bratislava NON-STOP</title>
+</head>
+<body>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        body{
+            background-color: #e8e8e8;
+        }
+        .div_all{
+            width: 70%;
+            margin: 0 auto;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+            background-color: #fff;
+        }
+        @media screen and (max-width: 900px) {
+            .div_all{
+                width: 95%;
+            }
+        }
+        .nav{
+            width: 100%;
+            display: flex;
+        }
+        .nav_div{
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+        .nav_links{
+            margin-top: 15px;
+            text-decoration: none;
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            justify-content: space-between;
+            align-items: center;
+            text-shadow: 0 0 2px #222222;
+        }
+        .nav_buttons{
+            text-decoration: none;
+        }
+        .a{
+            text-decoration: none;
+            font-size: 24px;
+            color: rgb(255, 255, 255);
+            border-bottom: 1px solid rgb(189, 189, 189);
+        }
+        .a:hover{
+            border-bottom: 3px solid rgb(255, 255, 255);
+            
+        }
+        .background{
+            background-image: url('megazamek.jpg');
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 900px;
+        }
+        .a_logo{
+            text-decoration: none;
+            font-size: 45px;
+            color: rgb(255, 255, 255);
+        }
+        .logo{
+            align-items: center;
+            display: flex;
+            text-shadow: 0 0 2px #222222;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0px;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-width: 1150px) {
+            #openNav {
+                display: block;
+            }
+            .nav_links{
+                display: none;
+            }
+            .sidebar{
+                text-align: center;
+            }
+            .a_logo{
+                font-size: 35px;
+            }
+        }
+
+        @media screen and (min-width: 1151px) {
+            #openNav {
+                display: none;
+            }
+        }
+        @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0px;
+            left: 0;
+            background-color: #2202af;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        @media screen and (max-width: 1150px) {
+            #openNav {
+                display: block;
+            }
+            .nav_links{
+                display: none;
+            }
+            .sidebar{
+                text-align: center;
+            }
+        }
+
+            @media screen and (min-width: 1151px) {
+                #openNav {
+                    display: none;
+                }
+            }
+            @media screen and (max-height: 450px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+        }
+        .image_text{
+            padding-left: 15%;
+            padding-right: 15%;
+            padding-top: 150px;
+            text-align: center;
+        }
+        .p1{
+            font-size: 62px;
+            color: rgb(255, 255, 255);
+        }
+        .p2{
+            color: rgb(255, 255, 255);
+            margin-top: 30px;
+            font-size: 25px;
+        }
+        .p3{
+            color: rgb(255, 255, 255);
+            margin-top: 10px;
+            font-size: 25px;
+        }
+        .p4{
+            padding-top: 50px;
+            text-align: center;
+            font-size: 30px;
+            color: rgb(255, 255, 255);
+        }
+        @media screen and (max-width: 900px) {
+        .image_text{
+            text-align: center;
+            padding-top: 80px;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .image_text{
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .p1{
+          font-size: 45px;
+        }
+        .p2{
+          font-size: 30px;
+        }
+        .p3{
+          font-size: 30px;
+        }
+    }
+    .card_all{ 
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+      max-height: auto; 
+      margin-top: 40px; 
+      max-width: 300px; 
+      min-width: 300px;
+      border: none; 
+    }
+    .card_img{
+      justify-content: center;
+      display: flex;
+      width: 100%;
+      border-top-left-radius: 5px; 
+      border-top-right-radius: 5px; 
+    }
+    .img{
+      border-top-left-radius: 10px; 
+      border-top-right-radius: 10px; 
+      width: 100%; 
+      height: 300px; 
+      min-height: 300px;
+    }
+    .nazev{
+      padding-left: 5px; 
+      padding-right: 5px; 
+      font-size: 28px; 
+      text-align: center; 
+      margin-top: 5%;
+      height: 70px;
+    }
+    .text{
+        text-align: center;
+      margin-left: 35px; 
+      margin-right: 35px; 
+      font-size: 19px; 
+      color: rgb(43, 43, 43); 
+      margin-top: 20px; 
+      margin-bottom: 10px;
+    }
+    .div_sluzby{
+      margin-left: 5%;  
+      margin-right: 5%;
+      margin-bottom: 55px;
+    }
+    .psluzby{
+      padding-top: 80px;
+        text-align: center;
+        font-size: 60px;
+        color: #000000;
+    }
+    @media screen and (max-width: 770px) {
+      .card_all{
+        display: block;
+        width: 100%;
+      }
+      .nazev{
+        margin-top: 1%;
+        font-size: 30px; 
+      }
+      .text{
+        font-size: 20px;
+      }
+      .card_img{
+        width: 100%;
+        height: 150px;
+        border-top-left-radius: 0; 
+        border-top-right-radius: 0; 
+        border-bottom-left-radius: 0;
+      }
+      .div_sluzby{
+        margin-left: 0;  
+        margin-right: 0;
+      }
+    }
+    .fixed-div {
+        position: fixed; /* Nastavení fixní pozice */
+        bottom: 0; /* Umístění na dolní okraj obrazovky */
+        width: 70%; /* Šířka divu, aby pokrýval celou šířku obrazovky */
+        background-color: #800000;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 55px;
+        z-index: 9999; /* Zajištění, aby byl div viditelný nad ostatními prvky */
+    }
+
+    .fixed-div button {
+        border-radius: 25px;
+        border: solid 1px white;
+        background-color: #800000;
+        width: 220px;
+        height: 35px;
+        font-size: 20px;
+        color: white;
+    }
+    @media screen and (max-width: 920px) {
+        .fixed-div{
+            width: 95%;
+        }
+    }
+    .onas{
+      display: flex;
+      justify-content: center;
+      padding-left: 3%; 
+      padding-right: 3%;
+      padding-bottom: 80px;
+      background-color: #ffffff;
+    }
+    .div_onas{
+      border-radius: 7px; 
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1); 
+      height: 500px;
+      background-color: white;
+      max-width: 950px;
+      display: flex;
+    }
+    .klicvzamku{
+      border-top-left-radius: 5px; 
+      border-bottom-left-radius: 5px;
+      width: 340px;
+      height: 500px;
+    }
+    .rights{
+      color: white; 
+      text-align: center; 
+      margin-top: 6%; 
+      padding-left: 2%; 
+      padding-right: 2%;
+    }
+    @media screen and (max-width: 1300px) {
+      .div_onas{
+        display: block;
+        height: auto;
+        width: 100%;
+        border-radius: 0;
+      }
+      .onas{
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .klicvzamku{
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+      }
+      .rights{
+        margin-top: 5%; 
+      }
+    }
+    .cislo{
+      color: white; 
+      font-size: 20px; 
+      text-decoration: none;
+    }
+    .cislo:hover{
+      text-decoration: underline;
+    }
+    .mail{
+      color: white; 
+      font-size: 20px; 
+      text-decoration: none;
+    }
+    .mail:hover{
+      text-decoration: underline;
+    }
+    #openNav{
+        margin-top: 15px;
+        margin-right: 15px;
+    }
+    </style>
+    <div class="div_all">
+        <div class="background">
+            <nav class="nav">
+                <div class="nav_div">
+                    <p class="logo"><a href="/" class="a_logo"><strong>Zámočníci-24/7 <i class='fas fa-key' style="font-size: 35px;"></i></strong></a></p>
+                    <ul class="nav_links">
+                        <li class="nav_buttons"><a class="a" href="#sluzby">Služby</a></li>
+                        <li class="nav_buttons"><a class="a" href="#cenik">Cenník</a></li>
+                        <li class="nav_buttons"><a class="a" href="#onas">O nás</a></li>
+                        <li class="nav_buttons"><a class="a" href="#kontakt">Kontakty</a></li>
+                    </ul>
+                </div>
+                <div id="openNav">
+                    <span style="font-size:35px;cursor:pointer; color: white;" onclick="openNav()">&#9776;</span>
+                </div>
+          </nav>
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#sluzby" style="color: white;" onclick="closeNav()">Služby</a>
+                <a href="#cenik" style="color: white;" onclick="closeNav()">Cenník</a>
+                <a href="#onas" style="color: white;" onclick="closeNav()">O nás</a>
+                <a href="#kontakt" style="color: white;" onclick="closeNav()">Kontakty</a>
+            </div>
+            
+            <div class="image_text">
+                <p class="p1"><strong>ZÁMOČNICKÁ POHOTOVOSŤ </strong><strong style="color: rgb(255, 255, 255); font-size: 70px;">BRATISLAVA</strong></p>
+                <p class="p2"><strong>Zámočníci s dlhoročnými skúsenosťami</strong></p> 
+                <p class="p3"><strong>Príchod do 25 minút</strong></p> 
+                
+                <div style="padding-top: 5%;">
+                    <button style="border-radius: 30px; border: none; background-color: #800000; width: 300px; height: 60px; font-size: 20px; color: white;"><i style="font-size:28px; padding-right: 5px;" class="fa"></i><a href="tel:+420252252805" style="color: white; text-decoration: none; font-size: 30px; "><strong>252 252 805</strong></a></button>
+                </div>
+            </div> 
+            <div style=" padding: 0 20%; margin-top: 3%;">
+                <p style="text-align: center;"><a href="#sluzby" style="font-size: 100px; text-decoration: none; color: rgb(255, 255, 255);">&#x2304; </a></p>
+                </div>
+        </div>
+        
+        <div id="sluzby" class="div_sluzby">
+            <p class="psluzby"><strong>Naše služby</strong></p>
+            <div style="display: flex;flex-wrap: wrap; gap: 20px; justify-content: center;">
+        
+            <div class="card_all">
+                <div class="card_img">
+                    <img class="img" src="Obrázek3.png">
+                </div>
+                <div class="div_jmeno">
+                  <p class="nazev"><strong>Otvorenie dverí</strong></p>
+                  <p class="text">Pokiaľ sa nemôžete dostať do svojho domu tak ste tu správne, my Vám pomôžeme Poskytujeme komplexné zámočnícke služby, otváranie všetkých typov zabuchnutých aj zamknutých dverí.</p>
+                  </div>  
+            </div>
+            <div class="card_all">
+                <div class="card_img">
+              <img class="img" src="Obrázek5.png">
+            </div>
+              <div class="div_jmeno">
+                <p class="nazev" ><strong>Zabezpečenie</strong></p>
+                <p class="text" >Kompletné zabezpečenie Vášho domova/obchodných priestorov. Pomôžeme Vám vybrať správne zabezpečenie, tak aby ste sa cítili bezpečne a to bez pochyb.</p>
+                </div>  
+          </div>
+          <div class="card_all" >
+            <div class="card_img">
+            <img class="img" src="Obrázek66.png" style="width: 100%; height: 300px; min-height: 300px;">
+            </div>
+            <div class="div_jmeno">
+              <p class="nazev" ><strong>Výmena všetkých typov zámkov</strong></p>
+              <p class="text" >Naše zámočníčky dokážu vymeniť alebo namontovať akýkoľvek zámok alebo vložku, všetkých značiek a bezpečnostných tried. Výmena vložky zámku je pre nás rutinnou záležitosťou.</p>
+              </div>  
+        </div>
+        <div class="card_all" >
+            <div class="card_img">
+          <img class="img" src="obrazek6.jpeg" style="width: 100%; height: 300px; min-height: 300px;">
+            </div>
+          <div class="div_jmeno">
+            <p class="nazev"><strong>Oprava dverí po násilnom vlámaniu</strong></p>
+            <p class="text" >Ak ste sa stali obeťou trestného činu, alebo iného násilného vniknutia, vaše dvere a zámky dáme do poriadku. Kvalitne a spoľahlivo, to sú naše heslá, ktorými sa naši zámočníci od počiatku riadia.</p>
+            </div>  
+        </div>
+        <div class="card_all" >
+            <div class="card_img">
+          <img class="img" src="obrazek5.jpg" style="width: 100%; height: 300px; min-height: 300px;">
+            </div>
+          <div class="div_jmeno">
+            <p class="nazev" ><strong>Otváranie trezorových zámkov</strong></p>
+            <p class="text">S otváraním trezorových zámkov máme bohaté skúsenosti, a preto si s otvorením trezora hravo poradíme.</p>
+            </div>  
+        </div>
+        <div class="card_all" >
+            <div class="card_img">
+          <img class="img" src="Obrázek9.png" style="width: 100%; height: 300px; min-height: 300px;">
+            </div>
+          <div class="div_jmeno">
+            <p class="nazev" ><strong>Montáž všetkých typov kovania</strong></p>
+            <p class="text" >Montáž kovania je našou každodennou rutinou, a preto je pre nás montáž kovania všetkých druhov hračka. Montáž Vám urobíme rýchlo a kvalitne.</p>
+            </div>  
+        </div>
+        <div class="card_all" >
+          <div class="card_img">
+        <img class="img" src="obrazek7.jpg" style="width: 100%; height: 300px; min-height: 300px;">
+          </div>
+        <div class="div_jmeno">
+          <p class="nazev" ><strong>Zlomený kľúč v zámku</strong></p>
+          <p class="text" >Zlomený kľúč v zámku pre nás nie je žiadny problém. Kľúč prídeme zo zámku vybrať. Proces trvá väčšinou len krátku chvíľu a to kvôli skúsenostiam, ktoré naši zámočníci majú.</p>
+          </div>  
+      </div>
+      <div class="card_all" >
+        <div class="card_img">
+      <img class="img" src="Obrázek11.jpg" style="width: 100%; height: 300px; min-height: 300px;">
+        </div>
+      <div class="div_jmeno">
+        <p class="nazev" ><strong>Otvorenie automobilu</strong></p>
+        <p class="text" >Na otváranie automobilov používame tie najmodernejšie nástroje a preto vám akékoľvek vozidlo otvoríme bez poškodenia.</p>
+        </div>  
+    </div>
+        </div>
+    </div>
+        <div class="fixed-div">
+            <button style="border-radius: 25px; border: solid 2px white; background-color: #800000; width: 300px; height: 45px; font-size: 20px; color: rgb(255, 255, 255);"><i style="font-size:23px; padding-right: 5px;" class="fa">&#xf095;</i><a href="tel:+420252252805" style="color: rgb(255, 255, 255); text-decoration: none; font-size: 25px;"><strong>252 252 805</strong></a></button>
+          </div>
+
+          <p id="onas" style="margin-top: 40px; font-size: 70px; text-align: center; padding-bottom: 25px; color: rgb(0, 0, 0); background-color: #ffffff; padding-top: 50px;"><strong>O nás</strong></p>
+          <div class="onas">
+            <div class="div_onas">
+              <div>
+                <img class="klicvzamku" src="obrazek.jpg" alt="klicvzamku">
+              </div>
+              <div>
+                <p style="font-size: 42px;padding-left: 35px; margin-top: 30px; margin-bottom: 25px; color: rgb(0, 0, 0);">Zámočníci-24/7</p>
+            <p style="padding-left: 35px; padding-right: 35px; font-size: 22px; margin-bottom: 20px; color: rgb(85, 85, 85);">Sme zámočnícka pohotovosť fungujúca nonstop 24 hodín denne 7 dní v týždni. Máme povesť spoľahlivého a profesionálneho poskytovateľa služieb v odbore zámočníctva. Našim hlavným cieľom je poskytovanie prvotriednych služieb od samotného objednania až po vystavenie daňového dokladu.</p>
+            
+            <div style="display: flex; padding-left: 35px;  padding-right: 35px;">
+              <strong style="font-size: 30px; color: #800000;">&#10003;</strong>
+              <p style="color: black; font-size: 22px; padding-left: 5px; padding-top: 6px;"><strong>Certifikovaní špecialisti v odbore</strong></p>
+            </div>
+            <div style="display: flex; padding-left: 35px;  padding-right: 35px;">
+              <strong style="font-size: 30px; color: #800000;">&#10003;</strong>
+              <p style="color: black; font-size: 22px; padding-left: 5px; padding-top: 6px;"><strong>Fungujúci nonstop 24/7</strong></p>
+            </div>
+            <div style="display: flex; padding-left: 35px;  padding-right: 35px;">
+              <strong style="font-size: 30px; color: #800000;">&#10003;</strong>
+              <p style="color: black; font-size: 22px; padding-left: 5px; padding-top: 6px;"><strong>Príchod do 25 minút</strong></p>
+            </div>
+            <div style="display: flex; padding-left: 35px;  padding-right: 35px;">
+              <strong style="font-size: 30px; color: #800000;">&#10003;</strong>
+              <p style="color: black; font-size: 22px; padding-left: 5px; padding-top: 6px;"><strong>Informácie o cene pred prácou</strong></p>
+            </div>
+                  
+          </div>
+          </div>
+          </div>
+
+          
+      <div id="kontakt" style=" background-image: url('megazamek.jpg'); background-position-y: -450px; background-repeat: no-repeat; background-size: cover; background-position: right; height:  370px; margin-bottom: 54px;">
+        <div style="display: flex;  margin-left: 10%; margin-right: 10%;">
+        <div style="margin-top: 30px;">
+            <p style="color: white; font-size: 42px;">Zámočníci-24/7</p>
+            <p style="color: white; font-size: 20px; margin-top: 5px;">Bratislava</p>
+            <p style="margin-top: 5px;"><a href="tel:+420252252805" class="cislo">+420 252 252 805</a></p>
+            <p style="margin-top: 5px;"><a class="mail" href="mailto:info@zamocnici24-7.sk">info@zamocnici24-7.sk</a></p>
+            <p style="margin-top: 5px;"><a href="ochrana-osobnich-udaju.html" class="cislo">Ochrana-osobních-údajů</a></p>
+            <p style="margin-top: 5px; color: white; font-size: 15px;">Transport Magic s.r.o.</p>
+            <p style="margin-top: 5px; color: white; font-size: 15px;">Adresa: Holečkova 789/49, Smíchov, 150 00 Praha</p>
+            <p style="margin-top: 5px; color: white; font-size: 15px;">IČO: 09718125</p>
+        </div>
+        </div>
+        <div class="rights">
+          <p>© 2024 zamocnici24-7.cz. All Rights Reserved</p>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+        function openNav() {
+           document.getElementById("mySidebar").style.width = "100%";
+           document.getElementById("mySidebar").style.height = "220px";
+       }
+       
+       function closeNav() {
+           document.getElementById("mySidebar").style.width = "0";
+       }
+       function checkScreenWidth() {
+           var screenWidth = window.innerWidth;
+           if (screenWidth > 900) {
+               closeNav();
+           }
+       }
+       window.addEventListener('resize', checkScreenWidth);
+ </script>
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
