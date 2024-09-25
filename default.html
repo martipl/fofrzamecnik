@@ -15,10 +15,10 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: sans-serif;
         }
         body{
             background-color: #e8e8e8;
+            font-family: Open Sans;
         }
         .div_all{
             width: 70%;
@@ -149,7 +149,7 @@
             z-index: 1;
             top: 0px;
             left: 0;
-            background-color: #2202af;
+            background-color: #800000;
             overflow-x: hidden;
             transition: 0.5s;
             padding-top: 60px;
@@ -206,6 +206,10 @@
             font-size: 62px;
             color: rgb(255, 255, 255);
         }
+        .p1_strong{
+          color: rgb(255, 255, 255); 
+          font-size: 70px;
+        }
         .p2{
             color: rgb(255, 255, 255);
             margin-top: 30px;
@@ -236,6 +240,9 @@
         .p1{
           font-size: 45px;
         }
+        .p1_strong{
+          font-size: 50px;
+        }
         .p2{
           font-size: 30px;
         }
@@ -245,8 +252,8 @@
     }
     .card_all{ 
       border-radius: 10px;
-      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
-      max-height: auto; 
+      box-shadow: 0px 0px 10px 5px rgba(255, 0, 0, 0.1);
+      height: 620px;
       margin-top: 40px; 
       max-width: 300px; 
       min-width: 300px;
@@ -278,7 +285,7 @@
         text-align: center;
       margin-left: 35px; 
       margin-right: 35px; 
-      font-size: 19px; 
+      font-size: 17px; 
       color: rgb(43, 43, 43); 
       margin-top: 20px; 
       margin-bottom: 10px;
@@ -301,14 +308,13 @@
       }
       .nazev{
         margin-top: 1%;
-        font-size: 30px; 
+        font-size: 28px; 
       }
       .text{
-        font-size: 20px;
+        font-size: 17px;
       }
       .card_img{
         width: 100%;
-        height: 150px;
         border-top-left-radius: 0; 
         border-top-right-radius: 0; 
         border-bottom-left-radius: 0;
@@ -354,8 +360,8 @@
     }
     .div_onas{
       border-radius: 7px; 
-      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1); 
-      height: 500px;
+      box-shadow: 0px 0px 10px 5px rgba(255, 0, 0, 0.1);
+      height: 520px;
       background-color: white;
       max-width: 950px;
       display: flex;
@@ -364,7 +370,7 @@
       border-top-left-radius: 5px; 
       border-bottom-left-radius: 5px;
       width: 340px;
-      height: 500px;
+      height: 520px;
     }
     .rights{
       color: white; 
@@ -413,6 +419,193 @@
         margin-top: 15px;
         margin-right: 15px;
     }
+
+    .p_kontakt{
+        color: white; 
+        font-size: 16px; 
+        padding: 10px 0;
+    }
+    .p_kontakt_tittle{
+      font-size: 20px;
+        color: white; 
+        font-weight: 700;
+        padding: 10px 0;
+    }
+    #fa-phone{
+        color: white; 
+        font-size: 20px; 
+        padding-top: 5px;
+        padding: 10px 0;
+    }
+    .phone_a{
+        color: white; 
+        font-size: 16px; 
+        padding-left: 10px;
+        padding: 10px 0;
+    }
+    .zasady{
+        color: white; 
+        font-size: 16px;
+    }
+    .div_obrazky{
+        display: flex; 
+        gap: 20px; 
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+        padding: 0 25px;
+    }
+    .img_cara{
+        height: 200px;
+    }
+    .div_why_us{
+        display: flex; 
+        justify-content: center;
+    }
+    .why_us_img{
+        width: 180px; 
+        height: 150px; 
+        padding: 0 15px;
+    }
+    .why_us_title{
+        color: black; 
+        font-size: 25px; 
+        font-weight: 700;
+    }
+    .why_us_text{
+        font-weight: 300; 
+        width: 500px;
+    }
+    @media screen and (max-width: 600px) {
+        .div_button{
+            display: none;
+        }
+        .p_nav_head{
+            font-size: 13px;
+        }
+        .a_phnumber{
+            font-size: 13px;
+        }
+        .p_kontakt{
+            font-size: 15px;
+        }
+        .p_kontakt_tittle{
+            font-size: 17px;
+        }
+        .zasady{
+            font-size: 12px;
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        .p_backgroundtitle{
+            font-size: 80px;
+        }
+        .div_formularnadservices{
+            flex-direction: column;
+            padding: 0;
+        }
+        .div_obrazky{
+            justify-content: center;
+        }
+        .why_us_text{
+            font-size: 13px;
+            max-width: 250px;
+        }
+        .why_us_title{
+            font-size: 15px;
+        }
+        .why_us_img{
+            width: 120px;
+            height: 90px;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .p_backgroundtitle{
+            font-size: 40px;
+        }
+        .p_backgroundtext{
+            font-size: 15px;
+            max-width: 350px;
+        }
+        .p{
+            font-size: 15px;
+        }
+        .div_pp{
+            flex-direction: column;
+        }
+        .why_us_text{
+            font-size: 13px;
+            max-width: 250px;
+        }
+        .img_cara{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 1500px) {
+        .div_main_call{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .tabulka1{
+      margin-left: 20%; 
+      margin-right: 20%; 
+      margin-top: 40px;
+    }
+    .tabulka2{
+      margin-left: 20%; 
+      margin-right: 20%; 
+      margin-top: 20px;
+      margin-bottom: 80px;
+    }
+    .pcenik{
+      font-size: 60px; 
+      text-align: center; 
+      margin-bottom: 10px;
+      color: rgb(0, 0, 0);
+    }
+    .pcenik1{
+      font-size: 15px; 
+      text-align: center; 
+      margin-bottom: 25px;
+    }
+    .table1{
+      padding-left: 10px; 
+      width: 100%; 
+      background-color: rgba(231, 231, 231, 0.589); 
+      color: black; 
+    }
+    .table2{
+      padding-left: 10px; 
+      width: 100%; 
+      background-color: rgba(209, 209, 209, 0.589); 
+      color: black; 
+    }
+    .table1:hover{
+      background-color: #80000034; 
+    }
+    .table2:hover{
+      background-color: #80000034; 
+    }
+    .tr1{
+      height: 35px;
+      font-size: 16px;
+    }
+    .td1{
+      width: 740px;
+    }
+    .td2{
+      min-width: 75px;
+    }
+    @media screen and (max-width: 1000px) {
+      .tabulka1{
+        margin-left: 2%; 
+        margin-right: 2%; 
+      }
+      .tabulka2{
+        margin-left: 2%; 
+        margin-right: 2%; 
+      }
+    }
     </style>
     <div class="div_all">
         <div class="background">
@@ -439,7 +632,7 @@
             </div>
             
             <div class="image_text">
-                <p class="p1"><strong>ZÁMOČNICKÁ POHOTOVOSŤ </strong><strong style="color: rgb(255, 255, 255); font-size: 70px;">BRATISLAVA</strong></p>
+                <p class="p1"><strong>ZÁMOČNICKÁ POHOTOVOSŤ </strong><strong class="p1_strong">BRATISLAVA</strong></p>
                 <p class="p2"><strong>Zámočníci s dlhoročnými skúsenosťami</strong></p> 
                 <p class="p3"><strong>Príchod do 25 minút</strong></p> 
                 
@@ -534,62 +727,257 @@
             <button style="border-radius: 25px; border: solid 2px white; background-color: #800000; width: 300px; height: 45px; font-size: 20px; color: rgb(255, 255, 255);"><i style="font-size:23px; padding-right: 5px;" class="fa">&#xf095;</i><a href="tel:+420252252805" style="color: rgb(255, 255, 255); text-decoration: none; font-size: 25px;"><strong>252 252 805</strong></a></button>
           </div>
 
-          <p id="onas" style="margin-top: 40px; font-size: 70px; text-align: center; padding-bottom: 25px; color: rgb(0, 0, 0); background-color: #ffffff; padding-top: 50px;"><strong>O nás</strong></p>
-          <div class="onas">
-            <div class="div_onas">
-              <div>
-                <img class="klicvzamku" src="obrazek.jpg" alt="klicvzamku">
+
+          <div id="cenik" class="tabulka1">
+            <p class="pcenik"><strong>Ceník</strong></p>
+            <p class="pcenik1" >Poskytujeme rychlé, profesionální a spolehlivé zámečnické služby v Praze a okolí nepřetržitě 7 dní v týdnu, nonstop 24 hodin denně</p>
+            <div>
+            <div style="box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.15);">
+              <table style="width: 100%; background-color: #800000; padding-left: 10px;">
+                <tr style="height: 40px; font-size: 20px; color: white;">
+                  <td style="width: 737px;">Popis práce</td>
+                  <td style="width: 50px;">Cena</td><td style="font-size: 15px;">(od)</td>
+                </tr>
+              </table>
+              <table class="table1">
+                <tr class="tr1">
+                    <td class="td1">Otvorenie zabuchnutých dverí</td>
+                    <td class="td2">36 €</td>
+                </tr>
+              </table>
+                <table class="table2">
+                  <tr class="tr1">
+                    <td class="td1">Výmena zámku / vložky</td>
+                    <td class="td2">12 €</td>
+                </tr>
+                </table>
+                <table class="table1">
+                <tr class="tr1">
+                  <td class="td1">Výmena vložky prídavného zámku</td>
+                  <td class="td2">32 €</td>
+                </tr>
+              </table>
+              <table class="table2">
+                <tr class="tr1">
+                  <td class="td1">Výmena vložky (bezpečnostné dvere)</td>
+                  <td class="td2">20 €</td>
+                </tr>
+              </table>
+              <table class="table1">
+                <tr class="tr1">
+                  <td class="td1">Výmena zámku CR, Mottura, Atra, Cisa…</td>
+                  <td class="td2">40 €</td>
+                </tr>
+              </table>
+              <table class="table2">
+                <tr class="tr1">
+                  <td class="td1">Oprava zaseknutého zámku / vložky</td>
+                  <td class="td2">20 €</td>
+                </tr>
+              </table>
+              <table class="table1">
+                <tr class="tr1">
+                  <td class="td1">Montáž šikovného zámku</td>
+                  <td class="td2">32 €</td>
+                </tr>
+              </table>
+              <table class="table2">
+                <tr class="tr1">
+                  <td class="td1">Montáž bezpečnostného kovania</td>
+                  <td class="td2">32 €</td>
+                </tr>
+              </table>
+              <table class="table1">
+                          <tr class="tr1">
+                      <td class="td1">Montáž zadlabávacieho zámku</td>
+                      <td class="td2">24 €</td>
+                    
+                  </tr>
+              </table>
+                  <table class="table2">
+                  <tr class="tr1">
+                      <td class="td1">Montáž samozamykacieho zámku</td>
+                      <td class="td2">60 €</td>
+                  </tr>
+                </table>
+                <table class="table1">
+                  <tr class="tr1">
+                    <td class="td1">Vybratie zalomeného kľúča (podľa zalomenia)</td>
+                    <td class="td2" >16 €</td>
+                  </tr>
+                </table>
+                <table class="table2">
+                  <tr class="tr1">
+                    <td class="td1">Demontáž vložky zámku bez kľúča</td>
+                    <td class="td2">20 €</td>
+                  </tr>
+                </table>
+                <table class="table1">
+                  <tr class="tr1">
+                    <td class="td1">Montáž závory FAB, HSP, CR, ATRA, CISA</td>
+                    <td class="td2">60 €</td>
+                  </tr>
+                </table>
+                <table class="table2">
+                  <tr class="tr1">
+                    <td class="td1">Montáž prídavného zámku 1572 a pod.</td>
+                    <td class="td2">40 €</td>
+                  </tr>
+                </table>
+                <table class="table1">
+                  <tr class="tr1">
+                    <td class="td1">Oprava dverí po vlámaniu</td>
+                    <td class="td2">16 €</td>
+                  </tr>
+                </table>
+                </div>
+                </div>
               </div>
-              <div>
-                <p style="font-size: 42px;padding-left: 35px; margin-top: 30px; margin-bottom: 25px; color: rgb(0, 0, 0);">Zámočníci-24/7</p>
-            <p style="padding-left: 35px; padding-right: 35px; font-size: 22px; margin-bottom: 20px; color: rgb(85, 85, 85);">Sme zámočnícka pohotovosť fungujúca nonstop 24 hodín denne 7 dní v týždni. Máme povesť spoľahlivého a profesionálneho poskytovateľa služieb v odbore zámočníctva. Našim hlavným cieľom je poskytovanie prvotriednych služieb od samotného objednania až po vystavenie daňového dokladu.</p>
-            
-            <div style="display: flex; padding-left: 35px;  padding-right: 35px;">
-              <strong style="font-size: 30px; color: #800000;">&#10003;</strong>
-              <p style="color: black; font-size: 22px; padding-left: 5px; padding-top: 6px;"><strong>Certifikovaní špecialisti v odbore</strong></p>
+        
+        
+                <div class="tabulka2">
+                  <div style="box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.15);">
+                    <table style="width: 100%; background-color: #800000; padding-left: 10px;">
+                      <tr style="height: 40px; font-size: 20px; color: white;">
+                        <td style="width: 737px;">Cestovné, slevy, příplatky</td>
+                        <td style="width: 50px;">Cena</td><td style="font-size: 15px;">(od)</td>
+                      </tr>
+                    </table>
+                    <table class="table1">
+                      <tr class="tr1">
+                          <td class="td1">Doprava po Bratislave</td>
+                          <td class="td2">23 €</td>
+                      </tr>
+                    </table>
+                    <table class="table2">
+                      <tr class="tr1">
+                          <td class="td1">Doprava mimo Bratislavy</td>
+                          <td class="td2">0,60 €/km</td>
+                      </tr>
+                    </table>
+                    <table class="table1">
+                      <tr class="tr1">
+                        <td class="td1">Každá ďalšia cesta k zákazke</td>
+                        <td class="td2">14 €</td>
+                      </tr>
+                    </table>
+                    <table class="table2">
+                      <tr class="tr1">
+                        <td class="td1">Expresný výjazd, pohotovosť</td>
+                        <td class="td2">8 €</td>
+                      </tr>
+                    </table>
+                    <table class="table1">
+                      <tr class="tr1">
+                        <td class="td1">Zľava pre obetí TČ (vlámanie a pod.)</td>
+                        <td class="td2">-20 %</td>
+                      </tr>
+                    </table>
+                    <table class="table2">
+                      <tr class="tr1">
+                        <td class="td1">Mimopracovný príplatok (17:00 – 22:00)</td>
+                        <td class="td2">+50 %</td>
+                      </tr>
+                    </table>
+                    <table class="table1">
+                      <tr class="tr1">
+                        <td class="td1">Nočná pohotovosť (22:00 – 7:00) a štátny sviatok</td>
+                        <td class="td2">+100 %</td>
+                      </tr>
+                    </table>
+                      <table class="table2">
+                      <tr class="tr1">
+                        <td class="td1">Práca cez víkend (sobota a nedeľa)</td>
+                        <td class="td2">+50 %</td>
+                      </tr>
+                      </table>
+                      </table>
+                      </div>
+                </div>
+
+        
+          <p id="onas" style="font-size: 50px; font-weight: 700; text-align: center; margin-bottom: 20;">PROČ SI VYBRAT PRÁVĚ NÁS?</p>
+        <p style="text-align: center; font-size: 15px; font-weight: 400; margin-bottom: 30px;">S námi vás nic nepřekvapí a vše půjde podle plánu</p>
+        <div class="div_why_us">
+            <img class="why_us_img" src="reliability.jpg" alt="">
+            <div>
+                <p class="why_us_title">Spoľahlivosť a zodpovednosť</p>
+                <p class="why_us_text">Naše remeselníky sme si vybrali z viac ako 400 remeselníkov v Pražskom kraji. Prešli náročným výberom a každý deň dbáme na to, aby vám poskytovali tie najkvalitnejšie služby.</p>
             </div>
-            <div style="display: flex; padding-left: 35px;  padding-right: 35px;">
-              <strong style="font-size: 30px; color: #800000;">&#10003;</strong>
-              <p style="color: black; font-size: 22px; padding-left: 5px; padding-top: 6px;"><strong>Fungujúci nonstop 24/7</strong></p>
+        </div>
+        <div class="div_why_us">
+            <div>
+                <p class="why_us_title">Práca odvedená na 100%</p>
+                <p class="why_us_text">Nemusíte sa obávať odfláknutej práce či nemilých prekvapení. Nami vybraní remeselníci odvádzajú prácu na 100% s mottom: "Robím to tak, ako keby som si to robil pre seba."</p>
             </div>
-            <div style="display: flex; padding-left: 35px;  padding-right: 35px;">
-              <strong style="font-size: 30px; color: #800000;">&#10003;</strong>
-              <p style="color: black; font-size: 22px; padding-left: 5px; padding-top: 6px;"><strong>Príchod do 25 minút</strong></p>
+            <img class="why_us_img" src="100.jpg" alt="">
+        </div>
+        <div class="div_why_us">
+            <img class="why_us_img" src="check-mark.jpg" alt="">
+            <div>
+                <p class="why_us_title">Hlavná je vaša spokojnosť</p>
+                <p class="why_us_text">Máme spoľahlivé remeselníkov, ktorí vám poskytnú záruku na vykonanú prácu. Budete maximálne spokojní. Navyše sme tu pre vás počas celého procesu na našej zákazníckej linke.</p>
             </div>
-            <div style="display: flex; padding-left: 35px;  padding-right: 35px;">
-              <strong style="font-size: 30px; color: #800000;">&#10003;</strong>
-              <p style="color: black; font-size: 22px; padding-left: 5px; padding-top: 6px;"><strong>Informácie o cene pred prácou</strong></p>
+        </div>
+        <div class="div_why_us">
+            <div>
+                <p class="why_us_title">Ušetríte čas aj peniaze</p>
+                <p class="why_us_text">S nami získate pokoj na duši. Budete mať dobre vykonanú prácu za primeranú cenu a nebudete musieť riešiť nepríjemné reklamácie či opletačky. Všetko klapne tak, ako má.</p>
             </div>
-                  
-          </div>
-          </div>
-          </div>
+            <img class="why_us_img" src="piggy-bank.jpg" alt="">
+        </div>
+        <div class="div_why_us">
+            <img class="why_us_img"src="smiley.jpg" alt="">
+            <div>
+                <p class="why_us_title">Priateľský prístup</p>
+                <p class="why_us_text">Všetci naši remeselníci sú milí a ochotní profíci, ktorí robia svoju prácu s úsmevom. Vždy vám radi pomôžu a poradia najlepšie, ako vedia.</p>
+            </div>
+        </div>
+        <div class="div_why_us">
+            <div>
+                <p class="why_us_title">Kvalita a profesionalita</p>
+                <p class="why_us_text">Nami vybraní remeselníci poskytujú najvyššiu kvalitu služieb. Každý remeselník je odborník a profesionál vo svojej oblasti a vy sa naň môžete absolútne spoľahnúť.</p>
+            </div>
+            <img class="why_us_img" src="shield.jpg" alt="">
+        </div>
 
           
-      <div id="kontakt" style=" background-image: url('megazamek.jpg'); background-position-y: -450px; background-repeat: no-repeat; background-size: cover; background-position: right; height:  370px; margin-bottom: 54px;">
-        <div style="display: flex;  margin-left: 10%; margin-right: 10%;">
-        <div style="margin-top: 30px;">
-            <p style="color: white; font-size: 42px;">Zámočníci-24/7</p>
-            <p style="color: white; font-size: 20px; margin-top: 5px;">Bratislava</p>
-            <p style="margin-top: 5px;"><a href="tel:+420252252805" class="cislo">+420 252 252 805</a></p>
-            <p style="margin-top: 5px;"><a class="mail" href="mailto:info@zamocnici24-7.sk">info@zamocnici24-7.sk</a></p>
-            <p style="margin-top: 5px;"><a href="ochrana-osobnich-udaju.html" class="cislo">Ochrana-osobních-údajů</a></p>
-            <p style="margin-top: 5px; color: white; font-size: 15px;">Transport Magic s.r.o.</p>
-            <p style="margin-top: 5px; color: white; font-size: 15px;">Adresa: Holečkova 789/49, Smíchov, 150 00 Praha</p>
-            <p style="margin-top: 5px; color: white; font-size: 15px;">IČO: 09718125</p>
+          <div id="kontakt" class="div_kontakty" style="flex-wrap: wrap; width: auto; height: 100%;padding-bottom: 50px; background-color: rgb(32, 32, 32); margin-top: 40px; display: flex; justify-content: center; align-items: flex-start; padding-top: 50px;">
+            <div style="width: 280px; padding: 0 10px;">
+                <p class="p_kontakt_tittle">IDENTIFKAČNÉ ÚDAJE</p>
+                <p class="p_kontakt">Top servis Slovakia s.r.o.</p>
+                <p class="p_kontakt">Tomášikova 1973/32</p>
+                <p class="p_kontakt">Ružinov, 831 04 Bratislava</p>
+                <p class="p_kontakt">IČO: 56394357</p>
+            </div>
+            <img class="img_cara" src="cara.png" alt="">
+            <div style="width: 280px; padding: 0 10px;">
+                <p class="p_kontakt_tittle">KONTAKT</p>
+                <div style="display: flex; align-items: center">
+                    <P><i class="fa fa-phone" id="fa-phone"></i></P>
+                    <a href="tel:+420228222135" class="phone_a">228 222 135</a>
+                </div>
+                <div style="display: flex; align-items: center">
+                    <P><i class="fa fa-envelope" id="fa-phone"></i></P>
+                    <a href="mailto:info@zamocnici-24/7.cz" class="phone_a">info@zamocnici-24/7.cz</a>
+                </div>
+            </div>
+            <img class="img_cara" src="cara.png" alt="">
+            <div style="width: 280px; padding: 0 10px;">
+                <p class="p_kontakt_tittle">OBCHODNÉ PODMIENKY</p>
+                <a href="ochrana-osobnich-udaju.html" class="zasady">Ochrana-osobních-údajů</a>
+            </div>
         </div>
+        <div class="div_all_rights" style="height: 40px; background-color: rgb(68, 68, 68); width: auto; display: flex; justify-content: center; align-items: center; margin-bottom: 50px;">
+            <p class="p_all_rights" style="color: white; font-size: 14px;">© 2024 MagicStav.cz. All Rights Reserved</p>
         </div>
-        <div class="rights">
-          <p>© 2024 zamocnici24-7.cz. All Rights Reserved</p>
-        </div>
-      </div>
 
     </div>
 
     <script>
         function openNav() {
            document.getElementById("mySidebar").style.width = "100%";
-           document.getElementById("mySidebar").style.height = "220px";
+           document.getElementById("mySidebar").style.height = "250px";
        }
        
        function closeNav() {
