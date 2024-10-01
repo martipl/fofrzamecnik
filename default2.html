@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family:Sans-serif;
+        }
+        .body{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            width: 100%;
+            display: flex;
+            background: linear-gradient(#003481, #1b0091);
+        }
+        .nav_div{
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 10%;
+        }
+        .nav_links{
+            text-decoration: none;
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            justify-content: space-between;
+            align-items: center;
+            text-shadow: 0 0 2px #222222;
+        }
+        .nav_buttons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            height: 40px;
+            text-align: center;
+        }
+        .nav_buttons:hover{
+            background-color: #3616c9;
+            border-radius: 20px;
+            border: 2px solid blue;
+        }
+        .a{
+            text-decoration: none;
+            font-size: 24px;
+            color: rgb(255, 255, 255);
+        }
+        .a:hover{
+            border-radius: 10px;
+        }
+        .a_logo{
+            text-decoration: none;
+            font-size: 45px;
+            color: rgb(255, 255, 255);
+        }
+        .logo{
+            align-items: center;
+            display: flex;
+            text-shadow: 0 0 2px #222222;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0px;
+            left: 0;
+            background-color: #150070;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-width: 1150px) {
+            #openNav {
+                display: block;
+                margin-top: 15px;
+                margin-right: 10%;
+            }
+            .nav_links{
+                display: none;
+            }
+            .sidebar{
+                text-align: center;
+            }
+            .a_logo{
+                font-size: 35px;
+            }
+        }
+
+        @media screen and (min-width: 1151px) {
+            #openNav {
+                display: none;
+            }
+        }
+        @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+        }
+        .upper_div{
+            height: 35px;
+            margin: 0 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .a_phnumber{
+            text-decoration: none;
+            color: rgb(75, 75, 75); 
+            font-weight: 400;
+            font-size: 18px;
+        }
+        .a_phnumber:hover{
+            text-decoration: underline;
+        }
+        .a_nav_head{
+            text-decoration: none;
+            color: rgb(75, 75, 75); 
+            margin: 0;
+            font-weight: 400;
+            font-size: 18px;
+        }
+        .a_nav_head:hover{
+            text-decoration: underline;
+        }
+        .p_nav_head{
+            text-decoration: none;
+            color: rgb(75, 75, 75); 
+            margin: 0;
+            font-weight: 400;
+            font-size: 18px;
+        }
+        .div_background{
+            background-image: url("background.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .p_background_title{
+            color: white;
+            font-family: 700;
+            font-size: 80px;
+            text-align: center;
+        }
+        .p_background_text{
+            color: white;
+            font-family: 700;
+            font-size: 29px;
+            text-align: center;
+        }
+        .p_sluzby_title{
+            color: black;
+            font-family: 700;
+            font-size: 50px;
+            text-align: center;
+            padding-top: 40px;
+        }
+        .div_formular{
+            width: auto; 
+            height: 850px; 
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            flex-direction: column;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 70px;
+        }
+        .form-container {
+            background: linear-gradient(#003481, #1b0091);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 320px;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .button_tel2{
+            width: 300px;
+            height: 50px;
+            border-radius: 25px;
+            border: none;
+            background-color: #FF9100;
+            margin-top: 30px;
+            padding-top: 10px;
+        }
+        .a_button2{
+            text-decoration: none;
+            font-size: 22px;
+            color: white;
+            font-weight: 600;
+        }
+        input[type="text"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #FF9100;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            background-color: #ee8802;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 20px;
+            margin-top: 0;
+            color: #ffffff;
+        }
+        .note {
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 15px;
+            color: #ccc;
+        }
+        .div_sluzby{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15%;
+        }
+        .sluzby{
+            width: 100%;
+        }
+        .service {
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .img_service{
+            width: 330px;
+            height: 250px;
+        }
+        .service_title{
+            color: #033e86;
+            font-weight: 700;
+            font-size: 30px;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+        .service_text{
+            font-weight: 200;
+            font-size: 16px;
+            color: rgb(95, 95, 95);
+            width: 80%;
+            text-align: center;
+        }
+        .div_obrazky{
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;  
+            padding: 0 25px;
+        }
+        .obrazky{
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+        }
+        .p_call_title{
+            font-size: 50px; 
+            font-weight: 700; 
+            text-align: center; 
+            margin-bottom: 5px;
+        }
+        .p_call_text{
+            text-align: center; 
+            margin: 0; 
+            color: rgb(49, 49, 49); 
+            font-weight: 400; 
+            font-size: 15px;
+        }
+        .p_callus_title{
+            font-size: 18px; 
+            font-weight: 500; 
+            margin-bottom: 5px; 
+            color: #033e86;
+        }
+        .p_callus_title1{
+            font-size: 18px; 
+            font-weight: 500; 
+            margin-bottom: 5px; 
+            color: #033e86;
+            width: 250px;
+        }
+        .p_callus_text{
+            width: 250px; 
+            font-size: 15px; 
+            font-weight: 400; 
+            margin: 0;
+        }
+        .div_main_call{
+            display: flex; 
+            justify-content: space-between; 
+            padding: 0 15%; 
+            padding-top: 30px;
+        }
+        .div_call{
+            display: flex;
+        }
+        .div_call_us{
+            padding-top: 100px;
+        }
+        .div_why_us{
+            display: flex; 
+            justify-content: center;
+        }
+        .why_us_img{
+            width: 150px; 
+            height: 150px; 
+            padding: 0 15px;
+        }
+        .why_us_title{
+            color: #033e86; 
+            font-size: 25px; 
+            font-weight: 700;
+        }
+        .why_us_text{
+            font-weight: 300; 
+            width: 500px;
+        }
+        .p_kontakt_tittle{
+            color: white; 
+            font-weight: 700;
+        }
+        .p_kontakt{
+            color: white; 
+            font-size: 14px;
+            padding: 10px 0;
+        }
+        .img_cara{
+            height: 200px;
+        }
+        .img_cara2{
+            height: 200px;
+        }
+        #fa-phone{
+            color: white; 
+            font-size: 20px; 
+            padding-top: 5px;
+        }
+        .phone_a{
+            color: white; 
+            font-size: 14px; 
+            padding-left: 10px;
+        }
+        .zasady{
+            color: white; 
+            font-size: 14px;
+            padding: 10px 0;
+        }
+        #fafa{
+            font-size: 80px; 
+            color: #1b0091; 
+            padding-top: 10px;
+        }
+        @media screen and (max-width: 750px) {
+            .div_strechy{
+                display: none;
+            }
+            .upper_div{
+                justify-content: center;
+            }
+            .a_nav_head{
+                font-size: 12px;
+            }
+            .a_phnumber{
+                font-size: 12px;
+            }
+            .why_us_img{
+                width: 80px; 
+                height: 80px; 
+                padding: 0 15px;
+            }
+            .why_us_title{
+                color: #033e86; 
+                font-size: 20px; 
+                font-weight: 700;
+            }
+            .why_us_text{
+                font-weight: 300; 
+                width: 250px;
+                font-size: 12px;
+            }
+            .img_cara2{
+                display: none;
+            }
+        }
+        @media screen and (max-width: 1500px) {
+            .p_background_title{
+                font-size: 60px;
+            }
+            .p_background_text{
+                font-size: 20px;
+            }
+            .div_sluzby{
+                display: block;
+                padding: 0;
+            }
+            .obrazky{
+                display: block;
+            }
+            .div_obrazky{
+                padding: 0;
+            }
+            .div_main_call{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+            #fafa{
+                font-size: 65px;
+            }
+        }
+        @media screen and (max-width: 1100px) {
+            .p_background_title{
+                font-size: 40px;
+            }
+            .p_background_text{
+                font-size: 15px;
+            }
+        }
+        @media screen and (max-width: 450px) {
+            .img_cara{
+                display: none;
+            }
+        }
+</style>
+<body>
+    <div class="upper_div">
+        <div class="div_strechy">
+            <p class="p_nav_head"><i class="fa fa-search"></i> Střechy-24/7</p>
+        </div>
+        <div style="display: flex;">
+            <a class="a_nav_head" href="mailto:info@strechy.cz"><i class="fa fa-envelope"></i> info@strechy-24/7.cz</a>
+            <p style="padding: 0 15px; color: rgb(75, 75, 75);">|</p>
+            <a class="a_phnumber" href="tel:+420228222135"><i class="fa fa-phone"></i> VOLEJTE 228 222 135</a>
+        </div>
+    </div>
+    <nav class="nav">
+        <div class="nav_div">
+            <p class="logo"><a href="/" class="a_logo"><strong>Střechy-24/7 <i class='fas fa-lightbulb' style="font-size: 35px;"></i></strong></a></p>
+            <ul class="nav_links">
+                <li class="nav_buttons"><a class="a" href="#sluzby">Služby</a></li>
+                <li class="nav_buttons"><a class="a" href="#onas">O nás</a></li>
+                <li class="nav_buttons"><a class="a" href="#kontakt">Kontakty</a></li>
+            </ul>
+        </div>
+        <div id="openNav">
+            <span style="font-size:35px;cursor:pointer; color: white;" onclick="openNav()">&#9776;</span>
+        </div>
+  </nav>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#sluzby" style="color: white;" onclick="closeNav()">Služby</a>
+        <a href="#onas" style="color: white;" onclick="closeNav()">O nás</a>
+        <a href="#kontakt" style="color: white;" onclick="closeNav()">Kontakty</a>
+    </div>
+    
+    <div class="div_background">
+        <p class="p_background_title"><strong>ČÍŠTĚNÍ STŘECH RODINNÝCH DOMŮ</strong></p>
+        <P class="p_background_text">Potřebujete umýt střechu na všem rodinném domě, tak to jste na tom správném místě</P>
+    </div>
+
+    <div class="div_sluzby">
+        <div class="sluzby">
+            <p class="p_sluzby_title"><strong>NAŠE SLUŽBY</strong></p>
+            <div class="div_obrazky">
+                <div class="service">
+                    <div class="obrazky">
+                        <img class="img_service" src="https://domerino.cz/wp-content/uploads/2024/05/Domerino_cisteni-strech7.jpg" alt="">
+                        <img class="img_service" src="https://domerino.cz/wp-content/uploads/2024/05/Domerino_cisteni-strech8.jpg" alt="">
+                    </div>
+                    <p class="service_title">MYTÍ STŘECHY RODINNÉHO DOMU</p>
+                    <p class="service_text">Zajistěte si čistou a zdravou střechu s naší profesionální službou mytí. Pomáháme prodloužit životnost střechy, odstranit mechy, lišejníky a další nečistoty, které mohou způsobit poškození. Používáme šetrné čisticí prostředky a moderní techniky, abychom dosáhli perfektních výsledků a obnovili původní vzhled vašeho domu.</p>
+                </div>
+                <div class="service">
+                    <div class="obrazky">
+                        <img class="img_service" src="https://domerino.cz/wp-content/uploads/2024/06/Domerino_cisteni_dlazby6.jpg" alt="">
+                        <img class="img_service" src="https://domerino.cz/wp-content/uploads/2024/06/Domerino_cisteni_dlazby8.jpg" alt="">
+                    </div>
+                    <p class="service_title">MYTÍ DLAŽBY</p>
+                    <p class="service_text">Dopřejte své dlažbě nový vzhled s naší profesionální službou mytí. Odstraníme nečistoty, mechy, lišejníky a skvrny, které mohou narušovat strukturu dlažby a její estetiku. Používáme moderní techniky a šetrné čisticí prostředky, aby dlažba vypadala jako nová a zároveň byla chráněna před poškozením a opotřebením.</p>
+                </div>
+                <div class="service">
+                    <div class="obrazky">
+                        <img class="img_service" src="https://domerino.cz/wp-content/uploads/2022/05/a-1-400x284.png" alt="">
+                        <img class="img_service" src="https://domerino.cz/wp-content/uploads/2024/05/Domerino_cisteni-fasad10.jpg" alt="">
+                    </div>
+                    <p class="service_title">MYTÍ FASÁDY</p>
+                    <p class="service_text">Obnovte vzhled vašeho domu s naší profesionální službou mytí fasád. Odstraníme prach, nečistoty, plísně a další nežádoucí vrstvy, které narušují estetiku a mohou poškodit povrch fasády. Používáme šetrné čisticí prostředky a moderní techniky, abychom fasádu důkladně vyčistili a zároveň ji ochránili před dlouhodobým opotřebením.</p>
+                </div>
+            </div>
+        </div>
+        <div class="div_formular">
+            <div class="form-container">
+                <h1>NAPIŠTE NÁM</h1>
+                <form action="send_mail.php" method="post">
+                    <label for="phone">Telefonní číslo *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Telefonní číslo" required>
+        
+                    <label for="name">Jméno a příjmení *</label>
+                    <input type="text" id="name" name="name" placeholder="Jméno a příjmení" required>
+        
+                    <label for="address">Město a adresa *</label>
+                    <input type="text" id="address" name="address" placeholder="Město a adresa" required>
+        
+                    <label for="message">Popište, co potřebujete *</label>
+                    <textarea id="message" name="message" placeholder="Popište, co potřebujete" required></textarea>
+        
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">Odesláním tohoto formuláře souhlasím se zpracováním osobních údajů</label>
+                    </div>
+        
+                    <button type="submit">ODESLAT</button>
+                </form>
+                <p class="note">Po odeslání formuláře vám pošleme kontakt na řemeslníka.</p>
+            </div>
+            <button class="button_tel2"><a class="a_button2" href="tel:+420228222135">VOLEJTE 228 222 135</a></button>
+        </div>
+    </div>
+    <div class="div_call_us">
+        <p class="p_call_title">STAČÍ ZAVOLAT</p>
+        <p class="p_call_text">Stačí zavolat a my hned začneme pracovat na vašem porblému</p>
+        <div class="div_main_call">
+            <div class="div_call">
+                <p><i style="font-size: 80px; color: #1b0091; padding-top: 10px;" class="fa fa-phone"></i></p>
+                <div style="padding-left: 15px;">
+                    <p class="p_callus_title">ZAVOLEJTE NÁM</p>
+                    <p class="p_callus_text">Stačí zavolat, napsat a popsat nám, co potřebujete a my vám pomůžeme.</p>
+                </div>
+            </div>
+            <div class="div_call">
+                <p><i id="fafa" class="fa fa-envelope"></i></p>
+                <div style="padding-left: 15px;">
+                    <p class="p_callus_title1">POŠLETE NÁM VYPLNĚNÝ FORMULÁŘ</p>
+                    <p class="p_callus_text">Zašleme vám kontakt na řemeslníka, se kterým se domluvíte na vašem problému.</p>
+                </div>
+            </div>
+            <div class="div_call">
+                <p><i style="font-size: 80px; color: #1b0091; padding-top: 10px;" class="fa fa-check-circle"></i></p>
+                <div style="padding-left: 15px;">
+                    <p class="p_callus_title">HOTOVO!</p>
+                    <p class="p_callus_text">Po předání informací se o všechno postaráme a vy se můžete spokojeně věnovat vašim zájmům.</p>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; padding-top: 30px; margin-bottom: 0; font-size: 15px; font-weight: 400;">Zavolejte a my to vyřešíme</p>
+    </div>
+    <div style="display: flex; justify-content: center; padding-bottom: 100px;">
+        <button class="button_tel2"><a class="a_button2" href="tel:+420228222135">VOLEJTE 228 222 135</a></button>
+    </div>
+    <p style="font-size: 50px; font-weight: 700; text-align: center; margin-bottom: 0;">PROČ SI VYBRAT PRÁVĚ NÁS?</p>
+    <p style="text-align: center; font-size: 15px; font-weight: 400;">S námi vás nic nepřekvapí a vše půjde podle plánu</p>
+    <div class="div_why_us">
+        <img class="why_us_img" src="reliability (1).png" alt="">
+        <div>
+            <p class="why_us_title">Spolehlivost a odpovědnost</p>
+            <p class="why_us_text">Naše řemeslníky jsme si vybrali z více než 400 řemeslníků v Pražském kraji. Prošli náročným výběrem a každý den dbáme na to, aby vám poskytovali ty nejkvalitnější služby.</p>
+        </div>
+    </div>
+    <div class="div_why_us">
+        <div>
+            <p class="why_us_title">Práce odvedená na 100%</p>
+            <p class="why_us_text">Nemusíte se obávat odfláknuté práce či nemilých překvapení. Námi vybraní řemeslníci odvádějí práci na 100 % s mottem: "Dělám to tak, jako kdybych si to dělal pro sebe."</p>
+        </div>
+        <img class="why_us_img" src="100 (1).png" alt="">
+        </div>
+        <div class="div_why_us">
+            <img class="why_us_img" src="check-mark (1).png" alt="">
+            <div>
+                <p class="why_us_title">Hlavní je vaše spokojenost</p>
+                <p class="why_us_text">Máme spolehlivé řemeslníky, kteří vám poskytnou záruku na vykonanou práci. Budete maximálně spokojeni. Navíc jsme tu pro vás během celého procesu na naší zákaznické lince.</p>
+            </div>
+        </div>
+        <div class="div_why_us">
+            <div>
+                <p class="why_us_title">Ušetříte čas i peníze</p>
+                <p class="why_us_text">S námi získáte klid na duši. Budete mít dobře vykonanou práci za přiměřenou cenu a nebudete muset řešit nepříjemné reklamace či opletačky. Všechno klapne tak, jak má.</p>
+            </div>
+            <img class="why_us_img" src="piggy-bank (1).png" alt="">
+        </div>
+        <div class="div_why_us">
+            <img class="why_us_img"src="smiley (1).png" alt="">
+            <div>
+                <p class="why_us_title">Přátelský přístup</p>
+                <p class="why_us_text">Všichni naši řemeslníci jsou milí a ochotní profíci, kteří dělají svou práci s úsměvem. Vždy vám rádi pomohou a poradí nejlépe, jak umí.</p>
+            </div>
+        </div>
+        <div class="div_why_us">
+            <div>
+                <p class="why_us_title">Kvalita a profesionalita</p>
+                <p class="why_us_text">Námi vybraní řemeslníci poskytují nejvyšší kvalitu služeb. Každý řemeslník je odborník a profesionál ve své oblasti a vy se na něj můžete absolutně spolehnout.</p>
+            </div>
+            <img class="why_us_img" src="shield (1) (1).png" alt="">
+        </div>
+    </div>
+    <div class="div_why_us">
+        <button class="button_tel2"><a class="a_button2" href="tel:+420228222135">VOLEJTE 228 222 135</a></button>
+    </div>
+    <div class="div_kontakty" style="flex-wrap: wrap; width: auto; height: 100%;padding-bottom: 50px; background-color: rgb(32, 32, 32); margin-top: 40px; display: flex; justify-content: center; align-items: flex-start; padding-top: 50px;">
+        <div style="width: 200px; padding: 0 15px;">
+            <p class="p_kontakt_tittle">IDENTIFKAČNÍ ÚDAJE</p>
+            <p class="p_kontakt" style="color: white; font-size: 14px;">Transport Magic s.r.o.</p>
+            <p class="p_kontakt">Holečkova 789/49</p>
+            <p class="p_kontakt">Smíchov, 150 00 Praha</p>
+            <p class="p_kontakt">IČO: 09718125</p>
+        </div>
+        <img class="img_cara" src="cara.png" alt="">
+        <div style="width: 200px; padding: 0 15px;">
+            <p class="p_kontakt_tittle">KONTAKT</p>
+            <div style="display: flex; align-items: center; padding: 10px 0;">
+                <P><i class="fa fa-phone" id="fa-phone"></i></P>
+                <a href="tel:+420228222135" class="phone_a">228 222 135</a>
+            </div>
+            <div style="display: flex; align-items: center; padding: 10px 0;">
+                <P><i class="fa fa-envelope" id="fa-phone"></i></P>
+                <a href="mailto:info@magicstav.cz" class="phone_a">info@magicstav.cz</a>
+            </div>
+        </div>
+        <img class="img_cara2" src="cara.png" alt="">
+        <div style="width: 200px; padding: 0 15px;">
+            <p class="p_kontakt_tittle">OBCHODNÍ PODMÍNKY</p>
+            <div style="padding: 10px 0;">
+                <a href="Zásady-ochrany-osobních-údajů.html" class="zasady">Ochrana-osobních-údajů</a>
+            </div>
+        </div>
+    </div>
+    <div class="div_all_rights" style="height: 40px; background-color: rgb(68, 68, 68); width: auto; display: flex; justify-content: center; align-items: center;">
+        <p class="p_all_rights" style="color: white; font-size: 14px;">© 2024 MagicStav.cz. All Rights Reserved</p>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+<script>
+    function openNav() {
+       document.getElementById("mySidebar").style.width = "100%";
+       document.getElementById("mySidebar").style.height = "250px";
+       document.getElementById("mySidebar").style.top = "35px";
+   }
+   
+   function closeNav() {
+       document.getElementById("mySidebar").style.width = "0";
+   }
+   function checkScreenWidth() {
+       var screenWidth = window.innerWidth;
+       if (screenWidth > 900) {
+           closeNav();
+       }
+   }
+   window.addEventListener('resize', checkScreenWidth);
+
+   window.addEventListener('scroll', function() {
+       var nav = document.getElementById('nav');
+       if (window.scrollY > 50) {
+           nav.style.backgroundColor = 'rgba(255, 255, 255)';
+           nav.style.opacity = '0.8';
+       } else {
+           nav.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+           nav.style.opacity = '1';
+       }
+   });
+</script>
+</body>
+</html>
