@@ -276,6 +276,11 @@
     .img_cara2{
         height: 200px;
     }
+    .img_cara3{
+        width: 200px;
+        height: auto;
+        display: none;
+    }
     #fa-phone{
         color: white; 
         font-size: 20px; 
@@ -299,9 +304,14 @@
             font-size: 48px;
         }
     }
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 462px) {
         .img_cara{
             display: none;
+        }
+    }
+    @media screen and (max-width: 458px) {
+        .img_cara3{
+            display: block;
         }
     }
     .div_sluzby{
@@ -782,6 +792,7 @@
             <p class="p_kontakt">Holečkova 789/49</p>
             <p class="p_kontakt">Smíchov, 150 00 Praha</p>
             <p class="p_kontakt">IČO: 09718125</p>
+            <img class="img_cara3" src="cara2.png" alt="">
         </div>
         <img class="img_cara" src="cara.png" alt="">
         <div style="width: 200px; padding: 0 15px;">
@@ -794,6 +805,7 @@
                 <P><i class="fa fa-envelope" id="fa-phone"></i></P>
                 <a href="mailto:info@magicstav.cz" class="phone_a">info@freshstrechy.cz</a>
             </div>
+            <img class="img_cara3" src="cara2.png" alt="">
         </div>
         <img class="img_cara2" src="cara.png" alt="">
         <div style="width: 200px; padding: 0 15px;">
