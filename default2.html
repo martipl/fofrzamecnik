@@ -177,12 +177,14 @@
             font-family: 700;
             font-size: 80px;
             text-align: center;
+            z-index: 4;
         }
         .p_background_text{
             color: white;
             font-family: 700;
             font-size: 29px;
             text-align: center;
+            z-index: 4;
         }
         .p_sluzby_title{
             color: black;
@@ -735,17 +737,17 @@
         <p class="p_all_rights" style="color: white; font-size: 14px;">© 2024 MagicStav.cz. All Rights Reserved</p>
     </div>
 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
             });
         });
-    </script>
+    });
+</script>
 
 <script>
     function openNav() {

@@ -54,7 +54,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: right;
-        height: 700px;
+        height: 750px;
         position: relative; /* Potřebné pro absolutní pozicování obrázku bagru uvnitř tohoto kontejneru */
         z-index: 1;
     }
@@ -197,11 +197,11 @@
     .div_vlna{
         background-image: url('vlna.png');
         background-repeat: no-repeat;
-        background-size: 100% 40%;
+        background-size: 100% 60%;
         width: 100%;
         height: 200px;
         position: absolute; /* Absolutní pozicování pro přesunutí obrázku */
-        bottom: -120px; /* Umístění na spodní okraj kontejneru */
+        bottom: -80px; /* Umístění na spodní okraj kontejneru */
         left: 0; /* Zarovnání doleva */
         z-index: 2; /* Zajištění, aby obrázek bagru byl viditelný před pozadím */
     }
@@ -270,9 +270,6 @@
         .img_cara2{
                 display: none;
             }
-        .p_main_title{
-            font-size: 55px;
-        }
     }
     @media screen and (max-width: 450px) {
         .img_cara{
@@ -330,119 +327,121 @@
         text-align: center;
     }
     .div_formular {
-        background: linear-gradient(#003481, #1b0091);
-        height: 700px; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        top: 70px;
-        margin-top: 50px;
-        padding: 20px 0;
-        position: relative;
-        z-index: 1;
-    }
+    background: linear-gradient(#003481, #1b0091); /* Change to 100% for responsiveness */
+    height: auto; /* Allow height to adjust dynamically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 70px;
+    margin-top: 50px;
+    padding: 20px; /* Add padding for small screens */
+    position: relative;
+    z-index: 1;
+}
 
-    .form-container {
-        padding: 20px 0;
-        border-radius: 8px;
-        width: 100%;
-        max-width: 600px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+.form-container {
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%; /* Make the form container width responsive */
+    max-width: 600px; /* Set a maximum width to prevent stretching on large screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="tel"],
+textarea {
+    width: 100%; /* Set width to 100% */
+    max-width: 500px; /* Limit max-width for larger screens */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+.checkbox-container {
+    display: flex; /* Enable wrapping of checkbox items */ /* Add some space between items */
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.checkbox-container > div {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    width: 100%; /* Button adapts to full width */
+    padding: 12px;
+    background-color: white;
+    color: #003481;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #0144a8;
+    color: white;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem; /* Responsive font size */
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: #ffffff;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .form-container { /* Reduce width for smaller screens */
     }
 
     input[type="text"],
     input[type="tel"],
     textarea {
-        width: 100%; 
-        max-width: 500px;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
+        width: 100%; /* Inputs fill available space */
     }
 
-    textarea {
-        height: 80px;
-        resize: none;
-    }
 
-    .checkbox-container {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-        gap: 10px;
-    }
-
-    .checkbox-container > div {
-        display: flex;
-        align-items: center;
-    }
-
-    input[type="checkbox"] {
-        margin-right: 10px;
+    h1 {
+        font-size: 2rem; /* Adjust heading font size */
     }
 
     button {
-        width: 100%;
-        padding: 12px;
-        background-color: white;
-        color: #003481;
-        border: none;
-        border-radius: 4px;
-        font-size: 1em;
-        cursor: pointer;
-        font-weight: bold;
-        text-transform: uppercase;
+        font-size: 0.9em; /* Slightly reduce button text size */
     }
-
-    button:hover {
-        background-color: #0144a8;
-        color: white;
+    form{
+        width: 300px;
     }
-
-    label {
-        display: block;
-        margin-bottom: 8px;
-        color: white;
+    label{
+        font-size: 13px;
     }
+}
 
-    h1 {
-        text-align: center;
-        font-size: 2.5rem; 
-        margin-bottom: 20px;
-        margin-top: 0;
-        color: #ffffff;
-    }
-
-    @media (max-width: 768px) {
-        .form-container {
-        }
-
-        input[type="text"],
-        input[type="tel"],
-        textarea {
-            width: 100%;
-        }
-
-
-        h1 {
-            font-size: 2rem;
-        }
-
-        button {
-            font-size: 0.9em; 
-        }
-        form{
-            width: 300px;
-        }
-        label{
-            font-size: 13px;
-        }
-    }
     .p_sluzby_title{
         color: black;
         font-family: 700;
@@ -569,7 +568,6 @@
                 <ul class="nav_links">
                     <li class="nav_buttons"><a class="a" href="#body">Úvod</a></li>
                     <li class="nav_buttons"><a class="a" href="#sluzby">Služby</a></li>
-                    <li class="nav_buttons"><a class="a" href="#proc">Proč?</a></li>
                     <li class="nav_buttons"><a class="a" href="#kontakt">Kontakty</a></li>
                 </ul>
             </div>
@@ -580,8 +578,7 @@
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="#body" style="color: white;" onclick="closeNav()">Úvod</a>
-            <a href="#sluzby" style="color: white;" onclick="closeNav()">Služby</a>
-            <a href="#proc" style="color: white;" onclick="closeNav()">Proč?</a>
+            <a href="#sluzby" style="color: white;" onclick="closeNav()">Střechy</a>
             <a href="#kontakt" style="color: white;" onclick="closeNav()">Kontakty</a>
         </div>
         <div class="div_main">
@@ -634,7 +631,7 @@
 
     
     
-    <div class="proc_umyt_strechu" id="proc">
+    <div class="proc_umyt_strechu">
         <p style=" text-align: center; color: black; font-size: 70px; margin-bottom: 30px;"><STRONG>PROČ SI TO NECHAT UMÝT</STRONG></p>
         <div class="proc_umyt_all">
             <img src="https://domerino.cz/wp-content/uploads/2024/05/Domerino_cisteni-strech8.jpg" alt="" class="proc_img">
