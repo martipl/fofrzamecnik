@@ -296,6 +296,10 @@
         font-size: 14px;
         padding: 10px 0;
     }
+    .kontakt_div{
+        width: 200px; 
+        padding: 0 15px;
+    }
     @media screen and (max-width: 750px) {
         .img_cara2{
                 display: none;
@@ -312,6 +316,11 @@
     @media screen and (max-width: 458px) {
         .img_cara3{
             display: block;
+        }
+        .kontakt_div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
     .div_sluzby{
@@ -786,7 +795,7 @@
     </div>
 
     <div id="kontakt" class="div_kontakty" style="flex-wrap: wrap; width: auto; height: 100%;padding-bottom: 50px; background-color: rgb(32, 32, 32); display: flex; justify-content: center; align-items: flex-start; padding-top: 50px;">
-        <div style="width: 200px; padding: 0 15px;">
+        <div class="kontakt_div">
             <p class="p_kontakt_tittle">IDENTIFKAČNÍ ÚDAJE</p>
             <p class="p_kontakt" style="color: white; font-size: 14px;">Transport Magic s.r.o.</p>
             <p class="p_kontakt">Holečkova 789/49</p>
@@ -795,7 +804,7 @@
             <img class="img_cara3" src="cara2.png" alt="">
         </div>
         <img class="img_cara" src="cara.png" alt="">
-        <div style="width: 200px; padding: 0 15px;">
+        <div class="kontakt_div">
             <p class="p_kontakt_tittle">KONTAKT</p>
             <div style="display: flex; align-items: center; padding: 10px 0;">
                 <P><i class="fa fa-phone" id="fa-phone"></i></P>
@@ -808,7 +817,7 @@
             <img class="img_cara3" src="cara2.png" alt="">
         </div>
         <img class="img_cara2" src="cara.png" alt="">
-        <div style="width: 200px; padding: 0 15px;">
+        <div class="kontakt_div">
             <p class="p_kontakt_tittle">OBCHODNÍ PODMÍNKY</p>
             <div style="padding: 10px 0;">
                 <a href="Zásady-ochrany-osobních-údajů.html" class="zasady">Ochrana-osobních-údajů</a>
