@@ -614,6 +614,9 @@
             margin-top: 50px;
             text-align: center;
         }
+        .sluzby_umyt{
+            height: 250px;
+        }
     }
     .div_pristup_main{
         height: 300px; 
@@ -640,14 +643,23 @@
         font-size: 20px; 
         font-weight: 700;
     }
+    .pristup{
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        width: 150px;
+    }
     @media screen and (max-width: 750px) {
         .img_spol{
             width: 80px;
             height: 80px;
         }
         .p_pristup{
-            font-size: 16px;
+            font-size: 10px;
             text-align: center;
+        }
+        .pristup{
+            width: 80px;
         }
     }
 </style>
@@ -743,15 +755,15 @@
     <div class="div_pristup_main">
         <div class="div_vlna4"></div>
         <div class="div_pristup">
-            <div style="display: flex; flex-direction: column; align-items: center;">
+            <div class="pristup">
                 <img src="check-mark.png" alt="" class="img_spol">
                 <p class="p_pristup">SPOLEHLIVOST A ZODPOVĚDNOST</p>
             </div>
-            <div style="display: flex; flex-direction: column; align-items: center;">
+            <div class="pristup">
                 <img src="piggy-bank.png" alt="" class="img_spol">
                 <p class="p_pristup">UŠETŘÍTE ČAS I PENÍZE</p>
             </div>
-            <div style="display: flex; flex-direction: column; align-items: center;">
+            <div class="pristup">
                 <img src="smiley.png" alt="" class="img_spol">
                 <p class="p_pristup">PŘÁTELSKÝ PŘÍSTUP</p>
             </div>
