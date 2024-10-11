@@ -215,7 +215,7 @@
         width: 100%;
         height: 200px;
         position: absolute; /* Absolutní pozicování pro přesunutí obrázku */
-        top: 0; /* Umístění na spodní okraj kontejneru */
+        top: -1px; /* Umístění na spodní okraj kontejneru */
         left: 0; /* Zarovnání doleva */
         z-index: 2; /* Zajištění, aby obrázek bagru byl viditelný před pozadím */
     }
@@ -226,7 +226,7 @@
         width: 100%;
         height: 200px;
         position: absolute; /* Absolutní pozicování pro přesunutí obrázku */
-        bottom: -160px; /* Umístění na spodní okraj kontejneru */
+        bottom: -161px; /* Umístění na spodní okraj kontejneru */
         left: 0; /* Zarovnání doleva */
         z-index: 2; /* Zajištění, aby obrázek bagru byl viditelný před pozadím */
     }
@@ -615,6 +615,40 @@
             text-align: center;
         }
     }
+    .div_pristup_main{
+        height: 300px; 
+        background: linear-gradient(#003481, #1b0091); 
+        margin-top: 100px; 
+        position: relative; 
+        z-index: 1;
+    }
+    .div_pristup{
+        width: 100%; 
+        display: flex; 
+        justify-content: space-evenly; 
+        align-items: center; 
+        height: 100%;
+    }
+    .img_spol{
+        height: 150px; 
+        width: 150px; 
+        padding-bottom: 10px; 
+        margin-top: -20px;
+    }
+    .p_pristup{
+        color: white; 
+        font-size: 20px; 
+        font-weight: 700;
+    }
+    @media screen and (max-width: 750px) {
+        .img_spol{
+            width: 100px;
+            height: 100px;
+        }
+        .p_pristup{
+            font-size: 15px;
+        }
+    }
 </style>
 <body id="body">
     <div class="upper_div">
@@ -705,8 +739,22 @@
         </div>
     </div>
 
-    <div style="height: 300px; background: linear-gradient(#003481, #1b0091); margin-top: 100px; position: relative; z-index: 1;">
+    <div class="div_pristup_main">
         <div class="div_vlna4"></div>
+        <div class="div_pristup">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="check-mark.png" alt="" class="img_spol">
+                <p class="p_pristup">SPOLEHLIVOST A ZODPOVĚDNOST</p>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="piggy-bank.png" alt="" class="img_spol">
+                <p class="p_pristup">UŠETŘÍTE ČAS I PENÍZE</p>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="smiley.png" alt="" class="img_spol">
+                <p class="p_pristup">PŘÁTELSKÝ PŘÍSTUP</p>
+            </div>
+        </div>
         <div class="div_vlna5"></div>
     </div>
     
