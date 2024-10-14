@@ -204,7 +204,7 @@
         width: 100%;
         height: 200px;
         position: absolute; /* Absolutní pozicování pro přesunutí obrázku */
-        bottom: -120px; /* Umístění na spodní okraj kontejneru */
+        bottom: -121px; /* Umístění na spodní okraj kontejneru */
         left: 0; /* Zarovnání doleva */
         z-index: 2; /* Zajištění, aby obrázek bagru byl viditelný před pozadím */
     }
@@ -237,7 +237,7 @@
         width: 100%;
         height: 200px;
         position: absolute; /* Absolutní pozicování pro přesunutí obrázku */
-        top: 0; /* Umístění na spodní okraj kontejneru */
+        top: -1px; /* Umístění na spodní okraj kontejneru */
         left: 0; /* Zarovnání doleva */
         z-index: 2; /* Zajištění, aby obrázek bagru byl viditelný před pozadím */
     }
@@ -248,7 +248,7 @@
         width: 100%;
         height: 200px;
         position: absolute; /* Absolutní pozicování pro přesunutí obrázku */
-        bottom: -164px; /* Umístění na spodní okraj kontejneru */
+        bottom: -161px; /* Umístění na spodní okraj kontejneru */
         left: 0; /* Zarovnání doleva */
         z-index: 2; /* Zajištění, aby obrázek bagru byl viditelný před pozadím */
     }
@@ -508,6 +508,10 @@
         }
     }
     @media screen and (max-width: 700px) {
+        .img_service{
+            width: 330px;
+            height: 250px;
+        }
         .img_service2{
             display: none;
         }
@@ -526,12 +530,12 @@
     }
     .proc_umyt_strechu{
         padding: 80px 15%;
+        height: 100%;
     }
     .proc_umyt_all{
         display: flex; 
         align-items: center; 
         flex-direction: row-reverse;
-        height: 400px;
     }
     .proc_umyt_all2{
         display: flex; 
@@ -585,17 +589,14 @@
     @media screen and (max-width: 950px) {
         .proc_umyt_all{
             display: flex;
-            justify-content: center;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 60px;
         }
         .proc_umyt_all2{
             display: flex;
             justify-content: center;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 60px;
         }
         .proc_img{
             right: 0;
@@ -610,14 +611,14 @@
         .proc_umyt{
             box-shadow: none;
             align-items: center;
-            height: 450px;
+            height: 480px;
         }
         .proc_text{
             padding: 0 15px;
         }
         .proc_title{
             font-size: 33px;
-            margin-top: 50px;
+            margin-top: 15px;
             text-align: center;
         }
         .sluzby_umyt{
